@@ -3,12 +3,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-10-02 18:03+0200\n"
-"PO-Revision-Date: 2026-09-30 19:42+0300\n"
+"PO-Revision-Date: 2026-10-02 22:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: giorbak\n"
 "Language: el\n"
@@ -27,20 +28,20 @@ msgstr ""
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "Έγινε λήψη %d γλωσσών"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "Έγινε λήψη %d γλωσσών, %d απέτυχαν"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
 msgstr "0-9 - Εισαγωγή κειμένου όπως σε τηλέφωνο, όταν είναι επιλεγμένο το πεδίο εισαγωγής"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "Όλες οι γλώσσες είναι εγκατεστημένες"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "Όλες οι γλώσσες αφαιρέθηκαν"
 
 msgid "Alt"
 msgstr "Alt"
@@ -85,15 +86,15 @@ msgid "Do you want to install it now?"
 msgstr "Θέλετε να την εγκαταστήσετε τώρα;"
 
 msgid "Download all"
-msgstr ""
+msgstr "Λήψη όλων"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "Να γίνει λήψη και των %d γλωσσών που λείπουν;"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "Γίνεται λήψη της γλώσσας %d από %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Ενεργοποίηση/απενεργοποίηση ελέγχου online ενημέρωσης"
@@ -193,7 +194,7 @@ msgid "NewVirtualKeyBoard setup"
 msgstr "Ρύθμιση NewVirtualKeyBoard"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "Δεν είναι εγκατεστημένη καμία γλώσσα"
 
 msgid "Numeric keypad"
 msgstr "Αριθμητικό πληκτρολόγιο"
@@ -232,11 +233,11 @@ msgid "Remember last search entry"
 msgstr "Απομνημόνευση τελευταίας καταχώρισης αναζήτησης"
 
 msgid "Remove all"
-msgstr ""
+msgstr "Αφαίρεση όλων"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "Να αφαιρεθούν και οι %d εγκατεστημένες γλώσσες;"
 
 msgid "Restart GUI"
 msgstr "Επανεκκίνηση του GUI"
