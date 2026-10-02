@@ -24,20 +24,20 @@ msgstr ""
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "%d Sprachen heruntergeladen"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "%d Sprachen heruntergeladen, %d fehlgeschlagen"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
 msgstr "0-9 - Texteingabe wie am Handy, wenn das Eingabefeld ausgewählt ist"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "Alle Sprachen sind installiert"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "Alle Sprachen entfernt"
 
 msgid "Alt"
 msgstr "Alt"
@@ -82,15 +82,15 @@ msgid "Do you want to install it now?"
 msgstr "Möchten Sie jetzt installieren?"
 
 msgid "Download all"
-msgstr ""
+msgstr "Alle herunterladen"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "Alle %d fehlenden Sprachen herunterladen?"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "Lade Sprache %d von %d herunter ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Online-Update-Prüfung aktivieren/deaktivieren"
@@ -190,7 +190,7 @@ msgid "NewVirtualKeyBoard setup"
 msgstr "NewVirtualKeyBoard Einstellungen"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "Keine Sprache installiert"
 
 msgid "Numeric keypad"
 msgstr "Ziffernblock"
@@ -229,11 +229,11 @@ msgid "Remember last search entry"
 msgstr "Letzte Suche merken"
 
 msgid "Remove all"
-msgstr ""
+msgstr "Alle entfernen"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "Alle %d installierten Sprachen entfernen?"
 
 msgid "Restart GUI"
 msgstr "GUI neu starten"
