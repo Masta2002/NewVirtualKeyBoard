@@ -122,7 +122,7 @@ def main():
         'Section: extra',
         'Priority: optional',
         'Maintainer: RAED - fairbird <rrrr53@hotmail.com>',
-        'Homepage: https://github.com/fairbird/NewVirtualKeyBoard',
+        'Homepage: https://github.com/Masta2002/NewVirtualKeyBoard',
         'Installed-Size: %d' % installed_kb,
         'Description: ' + desc[0],
     ] + desc[1:]) + '\n'

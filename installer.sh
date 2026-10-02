@@ -1,9 +1,12 @@
 #!/bin/sh
-##setup command=wget https://raw.githubusercontent.com/fairbird/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
+##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="13.10"
+version="13.11"
 description="
 What is NEW :
+- updates and keyboard layouts now come from
+  github.com/Masta2002/NewVirtualKeyBoard
+Since 13.10 :
 - OK on the language key switches between the installed languages,
   OK long opens a list of only those
 - the new keyboard is selected again after a reinstall when the saved
@@ -29,7 +32,7 @@ echo " ** Download and install NewVirtualKeyBoard ** "
 rm -rf "$TMPDIR"
 mkdir -p "$TMPDIR"
 cd "$TMPDIR" || exit 1
-if ! wget -q "https://github.com/fairbird/NewVirtualKeyBoard/archive/refs/heads/main.tar.gz" -O main.tar.gz \
+if ! wget -q "https://github.com/Masta2002/NewVirtualKeyBoard/archive/refs/heads/main.tar.gz" -O main.tar.gz \
    || ! tar -xzf main.tar.gz \
    || [ ! -f "NewVirtualKeyBoard-main$PLUGINPATH/VirtualKeyBoard.py" ]; then
 	echo "Download failed .. nothing was changed"

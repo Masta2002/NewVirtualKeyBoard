@@ -1020,7 +1020,12 @@ cfg.updateonline.value = False
 
 section('packaging')
 bb = readText(os.path.join(REPO, 'enigma2-plugin-systemplugins-newvirtualkeyboard.bb'))
-check('.bb version == plugin version', 'PV = "%s+git"' % setupmod.VER in bb)
+release = readText(os.path.join(REPO, '.github', 'workflows', 'release.yml'))
+check('.bb version from the release tag (v<plugin version>)', 'inherit gittag' in bb and 'PKGV = "${GITPKGVTAG}"' in bb and 'gh release create "v$VERSION"' in release)
+check('.bb, installer.sh and the update check use the same repository',
+      'git://github.com/Masta2002/NewVirtualKeyBoard;' in bb and 'https://github.com/Masta2002/NewVirtualKeyBoard/archive/' in readText(os.path.join(REPO, 'installer.sh'))
+      and setupmod.INSTALLER_URL == 'https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh'
+      and layouts.SERVER_URL == 'https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/kle/', (setupmod.INSTALLER_URL, layouts.SERVER_URL))
 prerm = readText(os.path.join(REPO, 'CI', 'prerm.sh'))
 body = lambda text: text[text.index('case "$1"'):text.index('exit 0\n', text.index('fi\n')) + 7].replace('$D/', '/')
 bbPrerm = bb[bb.index('pkg_prerm'):]

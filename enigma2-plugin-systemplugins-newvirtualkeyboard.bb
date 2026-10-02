@@ -4,15 +4,18 @@ MAINTAINER = "RAED - fairbird"
 LICENSE = "GPL-3.0-only"
 LIC_FILES_CHKSUM = "file://${COMMON_LICENSE_DIR}/GPL-3.0-only;md5=c79ff39f19dfec6d293b95dea7b07891"
 
-SRC_URI = "git://github.com/fairbird/NewVirtualKeyBoard;protocol=https;branch=main"
+SRC_URI = "git://github.com/Masta2002/NewVirtualKeyBoard;protocol=https;branch=main"
 SRCREV = "${AUTOREV}"
 S = "${WORKDIR}/git"
 
 # pure Python + images, nothing to build (no distutils/setup.py any more)
-inherit gitpkgv allarch
+inherit gittag allarch
 
-PV = "13.10+git"
-PKGV = "13.10+git${GITPKGV}"
+# the version comes from the release tag (v13.10 -> 13.10-git<commits>+<hash>);
+# gittag (OE-A, OpenPLi) runs "git describe --tags", so the plain tags of the
+# GitHub releases count, also for commits after a tag
+PV = "git"
+PKGV = "${GITPKGVTAG}"
 
 PLUGINDIR = "${libdir}/enigma2/python/Plugins/SystemPlugins/NewVirtualKeyBoard"
 

@@ -18,7 +18,7 @@ PY3 = sys.version_info[0] == 3
 
 PLUGIN_DIR = 'SystemPlugins/NewVirtualKeyBoard'
 LOG_FILE = '/tmp/VirtualKeyBoard.log'
-INSTALLER_URL = 'https://raw.githubusercontent.com/fairbird/NewVirtualKeyBoard/main/installer.sh'
+INSTALLER_URL = 'https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh'
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0'
 
 # keyboard / keypad background colours (setting "bgcolor")

@@ -101,18 +101,24 @@ jobs:
           {
             echo "## NewVirtualKeyBoard $VERSION"
             echo
+            # downloads of this release's files (shields.io counts per tag)
+            echo "![Downloads](https://img.shields.io/github/downloads/$GITHUB_REPOSITORY/v$VERSION/total?color=blue&style=flat-square)"
+            echo
             sed -n '/^description="/,/^"$/p' installer.sh | sed '1d;$d' | sed '/^What is NEW/d;/^$/d'
             echo
             echo "### Install"
             echo '- OE images (openATV, OpenPLi, OpenViX, ...): copy the `.ipk` to `/tmp` and run `opkg install /tmp/<file>.ipk`'
             echo '- DreamOS: copy the `.deb` to `/tmp` and run `dpkg -i /tmp/<file>.deb`'
-            echo '- or online: `wget https://raw.githubusercontent.com/fairbird/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh`'
+            echo '- or online: `wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh`'
             echo
             echo "Restart enigma2, then choose the keyboard in Menu > System > NewVirtualKeyBoard setup."
             echo
             if [ -n "$LAST_TAG" ]; then
               echo "### Commits since $LAST_TAG"
               git log "$LAST_TAG"..HEAD --pretty=format:"- %s (%h)" --no-merges
+              echo
+              echo
+              echo "**Full Changelog**: https://github.com/$GITHUB_REPOSITORY/compare/$LAST_TAG...v$VERSION"
             else
               echo "### Latest commits"
               git log --pretty=format:"- %s (%h)" --no-merges -n 15
