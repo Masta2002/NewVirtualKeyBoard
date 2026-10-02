@@ -1,9 +1,12 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="13.12"
+version="13.13"
 description="
 What is NEW :
+- language list (Install language): RED removes all installed languages,
+  GREEN downloads all missing ones
+Since 13.12 :
 - downloads check the server certificate; boxes without CA certificates
   fall back to the unchecked download as before
 - no deprecation warning on Python 3.14 when a layout is loaded

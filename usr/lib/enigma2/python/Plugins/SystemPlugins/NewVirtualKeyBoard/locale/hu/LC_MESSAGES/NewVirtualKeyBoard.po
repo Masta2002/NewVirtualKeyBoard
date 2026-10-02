@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 11:20+0200\n"
+"POT-Creation-Date: 2026-10-02 18:03+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: Warder\n"
 "Language-Team: \n"
@@ -20,7 +20,21 @@ msgid ""
 "Press OK or Exit to abort!"
 msgstr ""
 
+#, python-format
+msgid "%d languages downloaded"
+msgstr ""
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr ""
+
 msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr ""
+
+msgid "All languages are installed"
+msgstr ""
+
+msgid "All languages removed"
 msgstr ""
 
 msgid "Alt"
@@ -64,6 +78,17 @@ msgstr ""
 
 msgid "Do you want to install it now?"
 msgstr "Nem szeretné most telepíteni"
+
+msgid "Download all"
+msgstr ""
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr ""
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr ""
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Online frissítések ellenőrzésének engedélyezése/letiltása"
@@ -162,6 +187,9 @@ msgstr ""
 msgid "NewVirtualKeyBoard setup"
 msgstr ""
 
+msgid "No language is installed"
+msgstr ""
+
 msgid "Numeric keypad"
 msgstr ""
 
@@ -196,6 +224,13 @@ msgid "Red - Backspace"
 msgstr ""
 
 msgid "Remember last search entry"
+msgstr ""
+
+msgid "Remove all"
+msgstr ""
+
+#, python-format
+msgid "Remove all %d installed languages?"
 msgstr ""
 
 msgid "Restart GUI"

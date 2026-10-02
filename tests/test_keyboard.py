@@ -1261,6 +1261,81 @@ check('dot pixmaps cached', len(lst.pixmaps) == 4, list(lst.pixmaps))
 screen = vk.LanguageListScreen(Session(), None, 5)
 check('layout list: own title bar, no image border', 'source="Title"' in screen.skin and 'flags="wfNoBorder"' in screen.skin)
 check('layout list: old arguments still work', len(vk.LanguageListScreen(Session(), [({'sel': False, 'val': x},) for x in layouts.KbLayouts[:3]]).layouts) == 3)
+listSkin = ET.fromstring(screen.skin)
+check('layout list: RED/GREEN button pictures exist', [os.path.exists(w.get('pixmap')) for w in listSkin.findall('widget') if w.get('pixmap')] == [True, True])
+
+section('layout list: remove all / download all')
+layoutDir = layouts.LAYOUT_DIR
+layouts.LAYOUT_DIR = os.path.join(TMP, 'allkle') + os.sep
+os.mkdir(layouts.LAYOUT_DIR)
+for layoutId in ('00000407', '0000040c'):
+    shutil.copy(os.path.join(KLE, 'kle%s.kle' % layoutId), layouts.layoutFile(layoutId))
+with open(layouts.layoutFile('own'), 'w') as f:
+    f.write('{}')
+cfg.keys_layout.value = '0000040c'
+screen = vk.LanguageListScreen(Session())
+screen['languageList'] = FakeList()
+screen['languageList'].getCurrentIndex = lambda: 0
+screen.removeAll()
+args, kwargs, cb = screen.session.last()
+check('RED asks first, counts only known layouts', args[0] is MessageBox and args[1] == 'Remove all 2 installed languages?', args)
+cb(False)
+check('RED, no: nothing removed', len(layouts.installedLayoutIds()) == 3)
+cb(True)
+check('RED, yes: all removed, own file stays, built-in layout active',
+      layouts.installedLayoutIds() == ['own'] and cfg.keys_layout.value == '00000809' and screen['info'].text == 'All languages removed', (layouts.installedLayoutIds(), cfg.keys_layout.value))
+count = len(screen.session.opened)
+screen.removeAll()
+check('RED with nothing installed: message, no question', len(screen.session.opened) == count and screen['info'].text == 'No language is installed')
+os.remove(layouts.layoutFile('own'))
+shutil.copy(os.path.join(KLE, 'kle00000407.kle'), layouts.layoutFile('00000407'))
+fetched = []
+
+
+def fakeDownload(layoutId):
+    fetched.append(layoutId)
+    if layoutId == '00000410':
+        return False
+    shutil.copy(os.path.join(KLE, 'kle%s.kle' % layoutId), layouts.layoutFile(layoutId))
+    return True
+
+
+vk.downloadLayout = fakeDownload
+screen.downloadAll()
+args, kwargs, cb = screen.session.last()
+missing = len([x for x in layouts.KbLayouts if x[2] not in ('00000809', '00000407')])
+check('GREEN asks first with the number of missing layouts', args[1] == 'Download all %d missing languages?' % missing, args)
+cb(True)
+check('GREEN, yes: nothing in the GUI thread, first one queued, progress shown',
+      not fetched and len(QUEUE) == 1 and screen['info'].text == 'Downloading language 1 of %d ...' % missing, (fetched, screen['info'].text))
+screen.updateInfo()
+check('moving in the list keeps the progress', screen['info'].text.startswith('Downloading'))
+screen.removeAll()
+screen.downloadAll()
+check('RED / GREEN ignored while it runs', len(QUEUE) == 1 and screen.session.last()[0][1].startswith('Download all'))
+QUEUE[0].fn = lambda *a: 1 / 0
+runQueue()
+check('all downloaded one after the other, error and failure counted',
+      len(fetched) == missing - 1 and screen.downloadRun is None and screen['info'].text == '%d languages downloaded, 2 failed' % (missing - 2), screen['info'].text)
+check('the layouts are installed, active layout unchanged', len(layouts.installedLayoutIds()) == missing - 1 and cfg.keys_layout.value == '00000809')
+os.remove(layouts.layoutFile('0000040c'))
+os.remove(layouts.layoutFile('00000407'))
+del fetched[:]
+screen.downloadAll()
+screen.session.last()[2](True)
+screen.close()
+runQueue()
+check('closing the list stops the run after the current layout', len(fetched) == 1 and not QUEUE, fetched)
+for layoutId in layouts.installedLayoutIds():
+    os.remove(layouts.layoutFile(layoutId))
+installed = vk.LanguageListScreen(Session(), installedIds=['00000809'])
+installed['languageList'] = FakeList()
+installed.onStart()
+installed.removeAll()
+installed.downloadAll()
+check('installed-only list: no buttons, RED/GREEN do nothing',
+      not installed['key_red'].visible and not installed['key_green_icon'].visible and not installed.session.opened)
+layouts.LAYOUT_DIR = layoutDir
 
 # ==== openATV compatibility / numeric keypad ======================================================
 section('openATV')
