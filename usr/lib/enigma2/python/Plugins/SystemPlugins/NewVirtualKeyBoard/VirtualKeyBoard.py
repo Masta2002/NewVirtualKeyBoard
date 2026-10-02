@@ -25,6 +25,7 @@ from Components.MenuList import MenuList
 from Components.MultiContent import MultiContentEntryText, MultiContentEntryPixmapAlphaBlend
 from Components.Label import Label
 from Components.Input import Input
+from Components.Pixmap import Pixmap
 from Tools.LoadPixmap import LoadPixmap
 
 from Plugins.SystemPlugins.NewVirtualKeyBoard import _
@@ -36,7 +37,7 @@ from Plugins.SystemPlugins.NewVirtualKeyBoard.layouts import (KbLayouts, default
 from Plugins.SystemPlugins.NewVirtualKeyBoard.skin import KEY_IDS, MARKERS, KEY_ICONS, keyArt, keyMarker, keyboardSkin
 from Plugins.SystemPlugins.NewVirtualKeyBoard.suggestions import HISTORY_FILE, SearchHistory, SuggestionsFetcher
 from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import (PY3, BACKGROUND_COLORS, PixmapWidget, byTier, desktopFactor,
-    eConnectCallback, fontOffset, getversioninfo, iconPath, isFHD, keyArtDir, menuIconsDir, offsetFont, scaleSkin, sc, setting,
+    eConnectCallback, fontOffset, getversioninfo, iconPath, isFHD, keyArtDir, menuIconsDir, offsetFont, pluginPath, scaleSkin, sc, setting,
     trace_error)
 
 VER = getversioninfo()
@@ -203,23 +204,36 @@ class LanguageListScreen(Screen):
     # list closes. The arguments are the old interface: listValue = rows
     # ({'val': (name, locale, id)},), selIdx = selected row; the callback is
     # not needed any more. With installedIds only those layouts, and OK makes
-    # one the active layout and closes the list.
+    # one the active layout and closes the list. RED removes all installed
+    # layouts, GREEN downloads all missing ones (one after the other in a
+    # worker thread, the info bar shows how far it is).
 
     def __init__(self, session, listValue=None, selIdx=None, loadVKLayout_callback=None, installedIds=None):
+        # each tier has its own button pictures (images/key_red_sd.png, ...)
+        suffix = byTier('', '_wqhd', '_sd')
+        red, green = [pluginPath('images', 'key_%s%s.png' % (colour, suffix)) for colour in ('red', 'green')]
         if isFHD():
             self.skin = '''
-                <screen name="LanguageListScreen" position="center,center" size="900,826" backgroundColor="#16000000" transparent="0" title="Select Language" flags="wfNoBorder">
+                <screen name="LanguageListScreen" position="center,center" size="900,880" backgroundColor="#16000000" transparent="0" title="Select Language" flags="wfNoBorder">
                 <widget source="Title" render="Label" position="0,0" size="900,60" font="Regular;34" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#3f434f" transparent="0" />
                 <widget name="languageList" position="0,66" size="900,702" backgroundColor="#3f4450" transparent="0" scrollbarMode="showOnDemand" />
                 <widget name="info" zPosition="2" position="0,776" size="900,40" transparent="0" noWrap="1" font="Regular;30" valign="center" halign="center" foregroundColor="#ffffff" backgroundColor="#0f64b2" />
-                </screen>'''
+                <widget name="key_red_icon" position="20,830" size="38,38" pixmap="%s" zPosition="3" transparent="1" alphatest="blend" />
+                <widget name="key_red" position="68,826" size="380,46" zPosition="4" halign="left" valign="center" font="Regular;28" transparent="1" foregroundColor="#ffffff" backgroundColor="#16000000" />
+                <widget name="key_green_icon" position="470,830" size="38,38" pixmap="%s" zPosition="3" transparent="1" alphatest="blend" />
+                <widget name="key_green" position="518,826" size="380,46" zPosition="4" halign="left" valign="center" font="Regular;28" transparent="1" foregroundColor="#ffffff" backgroundColor="#16000000" />
+                </screen>''' % (red, green)
         else:
             self.skin = '''
-                <screen name="LanguageListScreen" position="center,center" size="600,546" backgroundColor="#16000000" transparent="0" title="Select Language" flags="wfNoBorder">
+                <screen name="LanguageListScreen" position="center,center" size="600,582" backgroundColor="#16000000" transparent="0" title="Select Language" flags="wfNoBorder">
                 <widget source="Title" render="Label" position="0,0" size="600,40" font="Regular;24" halign="center" valign="center" foregroundColor="#ffffff" backgroundColor="#3f434f" transparent="0" />
                 <widget name="languageList" position="0,44" size="600,460" backgroundColor="#3f4450" transparent="0" scrollbarMode="showOnDemand" />
                 <widget name="info" zPosition="2" position="0,512" size="600,26" transparent="0" noWrap="1" font="Regular;20" valign="center" halign="center" foregroundColor="#ffffff" backgroundColor="#0f64b2" />
-                </screen>'''
+                <widget name="key_red_icon" position="14,549" size="25,25" pixmap="%s" zPosition="3" transparent="1" alphatest="blend" />
+                <widget name="key_red" position="46,546" size="250,30" zPosition="4" halign="left" valign="center" font="Regular;19" transparent="1" foregroundColor="#ffffff" backgroundColor="#16000000" />
+                <widget name="key_green_icon" position="314,549" size="25,25" pixmap="%s" zPosition="3" transparent="1" alphatest="blend" />
+                <widget name="key_green" position="346,546" size="250,30" zPosition="4" halign="left" valign="center" font="Regular;19" transparent="1" foregroundColor="#ffffff" backgroundColor="#16000000" />
+                </screen>''' % (red, green)
         self.skin = scaleSkin(self.skin)
         Screen.__init__(self, session)
         self.skinName = 'LanguageListScreen'
@@ -232,18 +246,34 @@ class LanguageListScreen(Screen):
         self['languageList'] = LayoutList()
         self['languageList'].onSelectionChanged.append(self.updateInfo)
         self['info'] = Label(' ')
-        self['actions'] = ActionMap(['WizardActions'], {
+        self['key_red'] = Label(_("Remove all"))
+        self['key_green'] = Label(_("Download all"))
+        self['key_red_icon'] = Pixmap()
+        self['key_green_icon'] = Pixmap()
+        self['actions'] = ActionMap(['WizardActions', 'ColorActions'], {
             'back': self.close,
             'ok': self.keyOK,
+            'red': self.removeAll,
+            'green': self.downloadAll,
         }, -1)
+        # (ids still to download, how many in all, downloaded, failed) while
+        # GREEN runs, else None
+        self.downloadRun = None
+        self.listClosed = False
+        self.onClose.append(self.setClosed)
         self.onLayoutFinish.append(self.onStart)
 
     def onStart(self):
         self.setTitle(_("Keyboard layout selection"))
         if self.installedIds:
             # no install / remove here
-            self['info'].hide()
+            for name in ('info', 'key_red', 'key_green', 'key_red_icon', 'key_green_icon'):
+                self[name].hide()
         self.showList(self.selIdx or 0)
+
+    def setClosed(self):
+        # a running GREEN download stops after the current layout
+        self.listClosed = True
 
     def showList(self, index):
         self['languageList'].setList([(layout,) for layout in self.layouts])
@@ -251,6 +281,9 @@ class LanguageListScreen(Screen):
         self['languageList'].moveToIndex(index)
 
     def updateInfo(self):
+        if self.downloadRun:
+            # the progress stays in the info bar
+            return
         layout = self['languageList'].getCurrent()
         if layout and os.path.exists(layoutFile(layout[2])):
             self['info'].setText(_("Press ok to remove language"))
@@ -265,6 +298,8 @@ class LanguageListScreen(Screen):
         if self.installedIds:
             saveActiveLayoutId(layoutId)
             self.close()
+            return
+        if self.downloadRun:
             return
         index = self['languageList'].getCurrentIndex()
         if os.path.exists(layoutFile(layoutId)):
@@ -281,6 +316,83 @@ class LanguageListScreen(Screen):
         # redraws the dots (the new list selection sets the info text too)
         self.showList(index)
         self['info'].setText(info)
+
+    def refreshList(self, info):
+        # redraws the dots, the selection stays
+        self.showList(self['languageList'].getCurrentIndex() or 0)
+        self['info'].setText(info)
+
+    # ---- RED: remove all ----------------------------------------------------------------
+
+    def removeAll(self):
+        if self.installedIds or self.downloadRun:
+            return
+        ids = [layoutId for layoutId in installedLayoutIds() if layoutItem(layoutId)]
+        if not ids:
+            self['info'].setText(_("No language is installed"))
+            return
+        self.session.openWithCallback(self.removeAllConfirmed, MessageBox, _("Remove all %d installed languages?") % len(ids), MessageBox.TYPE_YESNO)
+
+    def removeAllConfirmed(self, answer=False):
+        if not answer or self.downloadRun:
+            return
+        for layoutId in installedLayoutIds():
+            if not layoutItem(layoutId):
+                # not one of ours (a hand-made file): left alone
+                continue
+            try:
+                os.remove(layoutFile(layoutId))
+            except OSError as e:
+                print('[NewVirtualKeyBoard] removing layout %s failed: %s' % (layoutId, e))
+        if not os.path.exists(layoutFile(activeLayoutId())):
+            # the built-in layout, not a new download of the removed one
+            saveActiveLayoutId(defaultKBLAYOUT['id'])
+        self.refreshList(_("All languages removed"))
+
+    # ---- GREEN: download all ------------------------------------------------------------
+
+    def downloadAll(self):
+        if self.installedIds or self.downloadRun:
+            return
+        ids = [layout[2] for layout in self.layouts if layout[2] != defaultKBLAYOUT['id'] and not os.path.exists(layoutFile(layout[2]))]
+        if not ids:
+            self['info'].setText(_("All languages are installed"))
+            return
+        self.session.openWithCallback(self.downloadAllConfirmed, MessageBox, _("Download all %d missing languages?") % len(ids), MessageBox.TYPE_YESNO)
+
+    def downloadAllConfirmed(self, answer=False):
+        if not answer or self.downloadRun:
+            return
+        ids = [layout[2] for layout in self.layouts if layout[2] != defaultKBLAYOUT['id'] and not os.path.exists(layoutFile(layout[2]))]
+        if ids:
+            self.downloadRun = [ids, len(ids), 0, 0]
+            self.downloadNext()
+
+    def downloadNext(self):
+        # one layout per worker thread call, so the GUI keeps running and the
+        # info bar can count
+        ids, total, done, failed = self.downloadRun
+        if self.listClosed:
+            return
+        if not ids:
+            self.downloadRun = None
+            if failed:
+                info = _("%d languages downloaded, %d failed") % (done, failed)
+            else:
+                info = _("%d languages downloaded") % done
+            self.refreshList(info)
+            return
+        self['info'].setText(_("Downloading language %d of %d ...") % (total - len(ids) + 1, total))
+        from twisted.internet import threads
+        threads.deferToThread(downloadLayout, ids.pop(0)).addCallbacks(self.downloadDone, self.downloadFailed)
+
+    def downloadDone(self, ok):
+        self.downloadRun[2 if ok else 3] += 1
+        self.downloadNext()
+
+    def downloadFailed(self, failure):
+        self.downloadRun[3] += 1
+        self.downloadNext()
 
 
 class TextInput(Input):

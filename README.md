@@ -62,6 +62,8 @@ image's own keyboard back.
   ISO 48-key grid, with the flag of each language
 - 🏳️ **language key**: OK switches to the next installed language, OK long
   opens a list of only the installed ones
+- 📥 **install languages** one by one, or all at once: in the language list
+  RED removes all installed languages, GREEN downloads all missing ones
 - 🔎 search **suggestions** from Google, YouTube, Bing, DuckDuckGo or IMDb, in
   the language of the layout
 - 🕘 **search history**, sorted while typing, with a size limit

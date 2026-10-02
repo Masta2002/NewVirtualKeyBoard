@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-30 11:20+0200\n"
+"POT-Creation-Date: 2026-10-02 18:03+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: Masta2002\n"
 "Language-Team: \n"
@@ -22,8 +22,22 @@ msgstr ""
 "\n"
 "OK oder EXIT drücken zum Beenden!"
 
+#, python-format
+msgid "%d languages downloaded"
+msgstr ""
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr ""
+
 msgid "0-9 - Text input like on a phone, when the input field is selected"
 msgstr "0-9 - Texteingabe wie am Handy, wenn das Eingabefeld ausgewählt ist"
+
+msgid "All languages are installed"
+msgstr ""
+
+msgid "All languages removed"
+msgstr ""
 
 msgid "Alt"
 msgstr "Alt"
@@ -66,6 +80,17 @@ msgstr "Den Suchverlauf löschen?"
 
 msgid "Do you want to install it now?"
 msgstr "Möchten Sie jetzt installieren?"
+
+msgid "Download all"
+msgstr ""
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr ""
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr ""
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Online-Update-Prüfung aktivieren/deaktivieren"
@@ -164,6 +189,9 @@ msgstr "NewVirtualKeyBoard  V %s"
 msgid "NewVirtualKeyBoard setup"
 msgstr "NewVirtualKeyBoard Einstellungen"
 
+msgid "No language is installed"
+msgstr ""
+
 msgid "Numeric keypad"
 msgstr "Ziffernblock"
 
@@ -199,6 +227,13 @@ msgstr "Rot - Rückschritt"
 
 msgid "Remember last search entry"
 msgstr "Letzte Suche merken"
+
+msgid "Remove all"
+msgstr ""
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr ""
 
 msgid "Restart GUI"
 msgstr "GUI neu starten"
