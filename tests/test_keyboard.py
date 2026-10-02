@@ -47,6 +47,18 @@ def readText(path):
         return f.read()
 
 
+def readBytes(path):
+    with io.open(path, 'rb') as f:
+        return f.read()
+
+
+def imageSize(path):
+    # Pillow keeps the file open until the image is closed
+    from PIL import Image
+    with Image.open(path) as image:
+        return image.size
+
+
 def readKle(layoutId):
     with io.open(os.path.join(KLE, 'kle%s.kle' % layoutId), encoding='utf-16') as f:
         return ast.literal_eval(f.read())
@@ -503,13 +515,83 @@ with io.open(os.path.join(layouts.LAYOUT_DIR, '00000407.kle'), 'w', encoding='ut
 check('readLayoutFile: UTF-8 file', layouts.readLayoutFile('00000407')['locale'] == 'de-DE')
 shutil.copy(os.path.join(KLE, 'kle0000040c.kle'), os.path.join(layouts.LAYOUT_DIR, '0000040c.kle'))
 check('readLayoutFile: UTF-16 file', layouts.readLayoutFile('0000040c')['id'] == '0000040c')
+for name, encoded in (('UTF-8 with BOM', b'\xef\xbb\xbf' + u"{'id': '00000409', 'name': u'Äö'}".encode('utf-8')),
+                      ('UTF-8 umlauts', u"{'id': '00000409', 'name': u'Äö'}".encode('utf-8')),
+                      ('UTF-16 big endian', u"{'id': '00000409', 'name': u'Äö'}".encode('utf-16-be')),
+                      ('UTF-16 little endian', u"{'id': '00000409', 'name': u'Äö'}".encode('utf-16-le'))):
+    bom = {'UTF-16 big endian': b'\xfe\xff', 'UTF-16 little endian': b'\xff\xfe'}.get(name, b'')
+    with io.open(layouts.layoutFile('00000409'), 'wb') as f:
+        f.write(bom + encoded)
+    check('readLayoutFile: %s' % name, layouts.readLayoutFile('00000409')['name'] == u'Äö')
+os.remove(layouts.layoutFile('00000409'))
 check('installed ids sorted', layouts.installedLayoutIds() == ['00000407', '0000040c'])
 check('the package ships no layouts (an update brings no removed ones back)', not [n for n in os.listdir(os.path.join(PLUGIN, 'skins')) if n == 'kle'])
 layoutDir, urlread = layouts.LAYOUT_DIR, layouts.urlread
 layouts.LAYOUT_DIR = os.path.join(TMP, 'newkle') + os.sep
-layouts.urlread = lambda url, timeout: (io.open(os.path.join(KLE, 'kle0000040c.kle'), 'rb').read(), 'text/plain')
+layouts.urlread = lambda url, timeout: (readBytes(os.path.join(KLE, 'kle0000040c.kle')), 'text/plain')
 check('download without the layout folder: created', layouts.downloadLayout('0000040c') and layouts.installedLayoutIds() == ['0000040c'])
 layouts.LAYOUT_DIR, layouts.urlread = layoutDir, urlread
+
+section('urlread: certificate check, fallback without it')
+import ssl  # noqa: E402
+if PY3:
+    import urllib.request as urlmodule  # noqa: E402
+    from urllib.error import URLError  # noqa: E402
+else:
+    import urllib2 as urlmodule  # noqa: E402
+    from urllib2 import URLError  # noqa: E402
+
+
+class FakeResponse(object):
+    def __init__(self):
+        self.closed = False
+        responses.append(self)
+
+    def info(self):
+        return {'Content-Type': 'text/plain'}
+
+    def read(self):
+        return b'data'
+
+    def close(self):
+        self.closed = True
+
+
+def fakeUrlopen(request, timeout=None, context=None):
+    checked = context is not None and context.verify_mode == ssl.CERT_REQUIRED
+    opened.append('checked' if checked else 'unchecked')
+    if failWith and (checked or failWith[0] != 'certificate'):
+        if failWith[0] == 'certificate':
+            error = ssl.SSLCertVerificationError('[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed') if PY3 else ssl.SSLError('[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed')
+        else:
+            error = failWith[0]
+        raise URLError(error)
+    return FakeResponse()
+
+
+realUrlopen = urlmodule.urlopen
+urlmodule.urlopen = fakeUrlopen
+responses, opened, failWith = [], [], []
+del tools.CERTIFICATES_UNUSABLE[:]
+check('certificate ok: read with the check, response closed',
+      tools.urlread('https://x/', 5) == (b'data', 'text/plain') and opened == ['checked'] and responses[-1].closed and not tools.CERTIFICATES_UNUSABLE, opened)
+opened[:], failWith[:] = [], ['certificate']
+check('certificate error: read again without the check',
+      tools.urlread('https://x/', 5) == (b'data', 'text/plain') and opened == ['checked', 'unchecked'] and responses[-1].closed and tools.CERTIFICATES_UNUSABLE, opened)
+opened[:] = []
+tools.urlread('https://x/', 5)
+check('after a certificate error: no second try with the check', opened == ['unchecked'], opened)
+del tools.CERTIFICATES_UNUSABLE[:]
+opened[:], failWith[:] = [], ['timed out']
+try:
+    tools.urlread('https://x/', 5)
+    raised = False
+except URLError:
+    raised = True
+check('other errors: raised, no read without the check', raised and opened == ['checked'] and not tools.CERTIFICATES_UNUSABLE, opened)
+check('hostname mismatch counts as a certificate error', tools.isCertificateError(URLError(ssl.CertificateError('hostname mismatch'))) if hasattr(ssl, 'CertificateError') else True)
+urlmodule.urlopen = realUrlopen
+del tools.CERTIFICATES_UNUSABLE[:]
 
 section('flags')
 noFlag = [x for x in layouts.KbLayouts if layouts.flagFileForLayout(x[2]).endswith('missing.png') and x[2] not in ('00120c00', '000c0c00')]
@@ -550,12 +632,12 @@ except ImportError:  # the portable py2.7 has no Pillow
     Image = None
 if Image:
     for keyId in (0, 1, 16, 59):
-        art = Image.open(tools.iconPath(artDir, skin.keyArt(keyId))).size
+        art = imageSize(tools.iconPath(artDir, skin.keyArt(keyId)))
         check('art size == widget size (%s)' % skin.keyArt(keyId), list(art) == rect(str(keyId))[2:], (art, rect(str(keyId))))
     for name in skin.MARKERS:
-        art = Image.open(tools.iconPath(artDir, name)).size
+        art = imageSize(tools.iconPath(artDir, name))
         check('marker size == art (%s)' % name, list(art) == rect(name)[2:], (art, rect(name)))
-    check('flag size == flag widget', list(Image.open(layouts.flagFileForLayout('00000407')).size) == rect('flag')[2:])
+    check('flag size == flag widget', list(imageSize(layouts.flagFileForLayout('00000407'))) == rect('flag')[2:])
 cfg.textalign.value = 'left'
 cfg.bgcolor.value = 'black'
 kb3 = newKeyboard()
@@ -814,7 +896,7 @@ kb = newKeyboard()
 kb.loadVKLayout(layouts.defaultKBLAYOUT)
 kb.switchToLanguageSelection = lambda: opened.append(1)
 installed = [layouts.layoutFile(i) for i in layouts.installedLayoutIds()]
-saved = dict((f, io.open(f, 'rb').read()) for f in installed)
+saved = dict((f, readBytes(f)) for f in installed)
 for f in installed:
     os.remove(f)
 kb.processKeyId(vk.KEY_LANGUAGE)
@@ -992,7 +1074,7 @@ else:
     print('     (skipped: no symlinks here)')
 
 section('update check')
-installer = io.open(os.path.join(REPO, 'installer.sh'), 'rb').read()
+installer = readBytes(os.path.join(REPO, 'installer.sh'))
 check('installer.sh has LF line endings', b'\r' not in installer)
 version, description = setupmod.parseInstaller(installer)
 check('installer.sh version == plugin version', version == setupmod.VER, (version, setupmod.VER))
@@ -1067,8 +1149,8 @@ if canLink:
     check('postinst while an image is built: nothing', not runPostinst(env))
     check('postinst with the saved setting: the new keyboard, image one as backup',
           runPostinst() and not os.path.exists(os.path.join(fakeScreens, 'VirtualKeyBoard.pyc'))
-          and io.open(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc'), 'rb').read() == b'image')
-    check('postinst again: backup kept', runPostinst() and io.open(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc'), 'rb').read() == b'image')
+          and readBytes(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc')) == b'image')
+    check('postinst again: backup kept', runPostinst() and readBytes(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc')) == b'image')
 else:
     print('     (postinst run skipped: no symlinks or sh here)')
 shutil.rmtree(fakeRoot, ignore_errors=True)
