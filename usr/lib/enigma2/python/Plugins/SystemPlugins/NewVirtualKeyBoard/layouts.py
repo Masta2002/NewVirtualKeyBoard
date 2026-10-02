@@ -18,7 +18,7 @@ import re
 from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import pluginPath, byTier, urlread
 
 LAYOUT_DIR = pluginPath('skins', 'kle') + '/'
-SERVER_URL = 'https://raw.githubusercontent.com/fairbird/NewVirtualKeyBoard/main/kle/'
+SERVER_URL = 'https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/kle/'
 
 # ---- key ids -------------------------------------------------------------
 KEY_TEXT = 0        # the input field
