@@ -95,16 +95,16 @@ def installedLayoutIds():
 def readLayoutFile(layoutId):
     # the layout dict of an installed .kle; raises on a broken file
     import codecs
+    import io
     from ast import literal_eval
-    path = layoutFile(layoutId)
-    try:
-        with codecs.open(path, encoding='utf-16') as f:
-            data = f.read()
-    except UnicodeError:
-        # UTF-8 file (Python 2 raises a plain UnicodeError for a missing BOM,
-        # not UnicodeDecodeError)
-        with codecs.open(path, encoding='utf-8') as f:
-            data = f.read()
+    with io.open(layoutFile(layoutId), 'rb') as f:
+        raw = f.read()
+    # the server's files are UTF-16 with a BOM; a file saved or edited as
+    # plain text is UTF-8 (with or without a BOM)
+    if raw.startswith((codecs.BOM_UTF16_LE, codecs.BOM_UTF16_BE)):
+        data = raw.decode('utf-16')
+    else:
+        data = raw.decode('utf-8-sig')
     layout = literal_eval(data)
     if layout.get('id') != layoutId:
         raise ValueError('Locale ID mismatched! %s <> %s' % (layout.get('id'), layoutId))

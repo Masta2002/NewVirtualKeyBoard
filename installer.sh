@@ -1,9 +1,13 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="13.11"
+version="13.12"
 description="
 What is NEW :
+- downloads check the server certificate; boxes without CA certificates
+  fall back to the unchecked download as before
+- no deprecation warning on Python 3.14 when a layout is loaded
+Since 13.11 :
 - updates and keyboard layouts now come from
   github.com/Masta2002/NewVirtualKeyBoard
 Since 13.10 :

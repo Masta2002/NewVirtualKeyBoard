@@ -141,24 +141,60 @@ def iconPath(folder, name):
 
 # ---- network ---------------------------------------------------------------
 
+# set after the first certificate error: the box has no (usable) CA bundle,
+# so the next requests skip the check right away instead of failing first
+CERTIFICATES_UNUSABLE = []
+
+
+def sslContexts():
+    # (checking, not checking) SSL context; (None, None) on Python 2 before
+    # 2.7.9, where urlopen() has no context argument
+    try:
+        import ssl
+        return ssl.create_default_context(), ssl._create_unverified_context()
+    except (ImportError, AttributeError):
+        return None, None
+
+
+def isCertificateError(error):
+    # urlopen() raises the SSL error itself or wrapped in a URLError
+    import ssl
+    reason = getattr(error, 'reason', error)
+    certErrors = tuple(c for c in (getattr(ssl, 'SSLCertVerificationError', None), getattr(ssl, 'CertificateError', None)) if c)
+    return (certErrors and isinstance(reason, certErrors)) or 'CERTIFICATE_VERIFY_FAILED' in str(reason)
+
+
 def urlread(url, timeout):
-    # (data, Content-Type) of an https URL. Certificates are not checked:
-    # many boxes have no CA bundle, and only public, non-secret data is read.
+    # (data, Content-Type) of an https URL. The certificate is checked; when
+    # that fails (many boxes have no CA bundle) the data is read without the
+    # check - only public, non-secret data is read here.
     if PY3:
         from urllib.request import urlopen, Request
     else:
         from urllib2 import urlopen, Request
     request = Request(url, headers={'User-Agent': USER_AGENT})
-    try:
-        import ssl
-        response = urlopen(request, timeout=timeout, context=ssl._create_unverified_context())
-    except (ImportError, AttributeError, TypeError):
+    checking, notChecking = sslContexts()
+    if checking is None:
         response = urlopen(request, timeout=timeout)
+    elif CERTIFICATES_UNUSABLE:
+        response = urlopen(request, timeout=timeout, context=notChecking)
+    else:
+        try:
+            response = urlopen(request, timeout=timeout, context=checking)
+        except Exception as e:
+            if not isCertificateError(e):
+                raise
+            print('[NewVirtualKeyBoard] certificate check failed (%s), reading without it from now on' % e)
+            CERTIFICATES_UNUSABLE.append(True)
+            response = urlopen(request, timeout=timeout, context=notChecking)
     try:
-        contentType = response.info().get('Content-Type', '') or ''
-    except Exception:
-        contentType = ''
-    return response.read(), contentType
+        try:
+            contentType = response.info().get('Content-Type', '') or ''
+        except Exception:
+            contentType = ''
+        return response.read(), contentType
+    finally:
+        response.close()
 
 
 # ---- misc ------------------------------------------------------------------
