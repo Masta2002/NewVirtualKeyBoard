@@ -1,9 +1,11 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="13.13"
+version="13.14"
 description="
 What is NEW :
+- the PVR key also works on remotes that send KEY_VIDEO for it
+Since 13.13 :
 - language list (Install language): RED removes all installed languages,
   GREEN downloads all missing ones
 Since 13.12 :
