@@ -1217,7 +1217,7 @@ else:
 section('keymap')
 keymap = ET.parse(os.path.join(PLUGIN, 'keymap.xml')).getroot()
 maps = dict((m.get('context'), dict((k.get('id'), k.get('mapto')) for k in m)) for m in keymap)
-check('keymap NVKActions', maps.get('NVKActions') == {'KEY_PREVIOUS': 'vk_prevpanel', 'KEY_NEXT': 'vk_nextpanel', 'KEY_FASTFORWARD': 'vk_space', 'KEY_REWIND': 'vk_cleartext', 'KEY_PVR': 'vk_nextpanel', 'KEY_TEXT': 'vk_language', 'KEY_OK': 'vk_languagelist', 'KEY_INFO': 'vk_help', 'KEY_HELP': 'vk_help'}, maps)
+check('keymap NVKActions', maps.get('NVKActions') == {'KEY_PREVIOUS': 'vk_prevpanel', 'KEY_NEXT': 'vk_nextpanel', 'KEY_FASTFORWARD': 'vk_space', 'KEY_REWIND': 'vk_cleartext', 'KEY_PVR': 'vk_nextpanel', 'KEY_VIDEO': 'vk_nextpanel', 'KEY_TEXT': 'vk_language', 'KEY_OK': 'vk_languagelist', 'KEY_INFO': 'vk_help', 'KEY_HELP': 'vk_help'}, maps)
 check('keymap: OK long only', [k.get('flags') for k in keymap.iter('key') if k.get('id') == 'KEY_OK'] == ['l'])
 actions = newKeyboard()['actions']
 check('actions: yellow/blue/TEXT/menu', actions['yellow'].__name__ == 'keyYellow' and actions['blue'].__name__ == 'keyBlue' and actions['vk_language'].__name__ == 'switchinstalledvklayout' and actions['menu'].__name__ == 'showSettings')
