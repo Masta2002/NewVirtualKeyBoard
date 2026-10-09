@@ -519,13 +519,14 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
             'up': self.keyUp,
             'down': self.keyDown,
             'red': self.keyRed,
-            'red_repeat': self.keyRed,
+            # held down RED only deletes text, never history entries
+            'red_repeat': self.keyBackspace,
             'green': self.keyGreen,
             # the colour keys type AltGr / Shift (changed far more often than
             # the language or the list)
             'yellow': self.keyYellow,
             'blue': self.keyBlue,
-            'deleteBackward': self.keyRed,
+            'deleteBackward': self.keyBackspace,
             'deleteForward': self.keyDelete,
             'pageUp': self.insertSpace,
             'pageDown': self.clearText,
@@ -978,6 +979,13 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
             self.processKeyId(keyId)
 
     def keyRed(self):
+        # on the search history RED deletes the selected entry
+        if self.focus == FOCUS_HISTORY:
+            self.removeHistoryEntry()
+        else:
+            self.keyBackspace()
+
+    def keyBackspace(self):
         self.keyboardKey(KEY_BACKSPACE)
 
     def keyDelete(self):
@@ -1106,6 +1114,20 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
         self.suggestions = suggestions
         self['suggestionList'].setList([(x,) for x in suggestions])
 
+    def removeHistoryEntry(self):
+        text = self['historyList'].getCurrent()
+        if not text or text not in self.searchHistoryList:
+            return
+        idx = self.searchHistoryList.index(text)
+        self.history.remove(text)
+        self.searchHistoryList = self.history.sortedFor(self['text'].getText())
+        self['historyList'].setList([(x,) for x in self.searchHistoryList])
+        if self.searchHistoryList:
+            # stay on the same row (the one after the deleted entry)
+            self['historyList'].moveToIndex(min(idx, len(self.searchHistoryList) - 1))
+        else:
+            self.switchToKeyboard()
+
     def clearSearchHistory(self):
         self.history.clear()
         self.searchHistoryList = []
@@ -1144,7 +1166,7 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
         rows = [
             (_("OK - Type the selected key / take the selected suggestion or history entry"), 'key_ok'),
             (_("Green - Enter: confirm the text and close"), 'key_green'),
-            (_("Red - Backspace"), 'key_red'),
+            (_("Red - Backspace / in the search history: delete the entry"), 'key_red'),
             (_("Yellow - AltGr"), 'key_yellow'),
             (_("Blue - Shift"), 'key_blue'),
             (_("Text - Switch language"), 'key_text'),

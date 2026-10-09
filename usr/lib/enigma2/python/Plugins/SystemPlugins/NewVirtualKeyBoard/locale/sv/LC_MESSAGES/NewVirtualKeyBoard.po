@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - sv
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Tryck OK eller Exit för att avbryta!"
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Nedladdade språk: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Nedladdade språk: %d, misslyckade: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Textinmatning som på en mobil, när inmatningsfältet är valt"
+
+msgid "All languages are installed"
+msgstr "Alla språk är installerade"
+
+msgid "All languages removed"
+msgstr "Alla språk har tagits bort"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Bakgrundsfärg"
+
+msgid "Black"
+msgstr "Svart"
+
+msgid "Blue - Shift"
+msgstr "Blå - Shift"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Cancel execution?"
+msgstr "Avbryta körningen?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Rensa"
+
+msgid "Clear search history"
+msgstr "Rensa sökhistorik"
+
+msgid "Console"
+msgstr "Konsol"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Delete the search history?"
+msgstr "Radera sökhistoriken?"
+
+msgid "Do you want to install it now?"
+msgstr "Vill du installera den nu?"
+
+msgid "Download all"
+msgstr "Ladda ner alla"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "Ladda ner alla saknade språk (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Laddar ner språk %d av %d ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Aktivera/inaktivera sökning efter onlineuppdateringar"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "Körningen är klar!!"
+
+msgid "Execution progress:"
+msgstr "Körningens förlopp:"
+
+msgid "Exit"
+msgstr "Avsluta"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Stäng utan att använda texten"
+
+msgid "Failed to download language, try later"
+msgstr "Det gick inte att ladda ner språket, försök igen senare"
+
+msgid "Fast forward - Insert space"
+msgstr "Spola framåt - Infoga mellanslag"
+
+msgid "Font size (-10 to +30)"
+msgstr "Teckenstorlek (-10 till +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Grön - Enter: bekräfta texten och stäng"
+
+msgid "Help"
+msgstr "Hjälp"
+
+msgid "Hide"
+msgstr "Dölj"
+
+msgid "Image virtual keyboard"
+msgstr "Imagens virtuella tangentbord"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Visa den här skärmen igen"
+
+msgid "Install language"
+msgstr "Installera språk"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Installerar senaste uppdateringen, enigma startas efter installationen"
+
+msgid "Keyboard layout selection"
+msgstr "Val av tangentbordslayout"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Språket har laddats ner, installationen avslutas"
+
+msgid "Language removed from installed package"
+msgstr "Språket har tagits bort från det installerade paketet"
+
+msgid "Left"
+msgstr "Vänster"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Vänster / Höger vid tangentbordets kant - Byt till förslagen eller sökhistoriken"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "Det gick inte att läsa in tangentbordslayouten %s"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Inställningar, installera språk, rensa sökhistoriken"
+
+msgid "Mostly transparent"
+msgstr "Mestadels genomskinlig"
+
+msgid "New Virtual Keyboard"
+msgstr "Nytt virtuellt tangentbord"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Nytt virtuellt tangentbord - Originalkod SamSamSam (e2iplayer). Bidragsgivare: mfaraj57 och Fairbird. Skin och ändringar: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Inställningar för Nytt virtuellt tangentbord"
+
+msgid "New version"
+msgstr "Ny version"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "NewVirtualKeyBoard inställningar"
+
+msgid "No language is installed"
+msgstr "Inget språk är installerat"
+
+msgid "Numeric keypad"
+msgstr "Numeriskt tangentbord"
+
+msgid "Numeric keypad for numbers"
+msgstr "Numeriskt tangentbord för sifferfält"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Skriv vald tangent / använd valt förslag eller historikpost"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / GRÖN - godkänn, EXIT - avbryt"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Växla mellan tangentbord, förslag och sökhistorik"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Rensa inmatad text"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Infoga mellanslag"
+
+msgid "Press ok to install language"
+msgstr "Tryck OK för att installera språket"
+
+msgid "Press ok to remove language"
+msgstr "Tryck OK för att ta bort språket"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Föregående / Nästa - Växla mellan tangentbord, förslag och sökhistorik"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Röd - Backsteg / i sökhistoriken: radera posten"
+
+msgid "Remember last search entry"
+msgstr "Kom ihåg senaste sökningen"
+
+msgid "Remove all"
+msgstr "Ta bort alla"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "Ta bort alla installerade språk (%d)?"
+
+msgid "Restart GUI"
+msgstr "Starta om GUI"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "Starta om enigma2 för att läsa in de nya inställningarna?"
+
+msgid "Rewind - Clear input text"
+msgstr "Spola bakåt - Rensa inmatad text"
+
+msgid "Right"
+msgstr "Höger"
+
+msgid "Save"
+msgstr "Spara"
+
+msgid "Search history"
+msgstr "Sökhistorik"
+
+msgid "Search history entries (1-99999)"
+msgstr "Poster i sökhistoriken (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Halvgenomskinlig"
+
+msgid "Setup virtual keyboard"
+msgstr "Ställ in virtuellt tangentbord"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Show flags"
+msgstr "Visa flaggor"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Visa pluginet i pluginläsaren"
+
+msgid "Show search history"
+msgstr "Visa sökhistorik"
+
+msgid "Show suggestions"
+msgstr "Visa förslag"
+
+msgid "Suggestions"
+msgstr "Förslag"
+
+msgid "Suggestions provider"
+msgstr "Leverantör av förslag"
+
+msgid "Switching the keyboard failed"
+msgstr "Det gick inte att byta tangentbord"
+
+msgid "Text - Switch language"
+msgstr "Text - Byt språk"
+
+msgid "Text field alignment"
+msgstr "Justering av textfältet"
+
+msgid "Text input method-keyboard"
+msgstr "Textinmatningsmetod - tangentbord"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "Säkerhetskopian av imagens tangentbord saknas, Nytt virtuellt tangentbord förblir aktivt."
+
+msgid "Transparent"
+msgstr "Genomskinlig"
+
+msgid "Virtual Keyboard"
+msgstr "Virtuellt tangentbord"
+
+msgid "Yellow - AltGr"
+msgstr "Gul - AltGr"
+
+msgid "is available"
+msgstr "är tillgänglig"

@@ -1,9 +1,16 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="13.14"
+version="14.01"
 description="
 What is NEW :
+- Polish translation
+- Arabic, Czech, French, Hungarian, Italian, Russian, Slovak and Chinese
+  translations complete, wrong old texts corrected
+- RED on the search history deletes the selected entry
+- new translations: Bulgarian, Danish, Dutch, Norwegian, Portuguese,
+  Romanian, Serbian, Spanish, Swedish, Turkish, Ukrainian
+Since 13.14 :
 - the PVR key also works on remotes that send KEY_VIDEO for it
 Since 13.13 :
 - language list (Install language): RED removes all installed languages,

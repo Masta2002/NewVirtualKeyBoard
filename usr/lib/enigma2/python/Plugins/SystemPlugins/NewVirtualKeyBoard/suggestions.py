@@ -182,6 +182,19 @@ class SearchHistory(object):
             return
         entries = [text] + [entry for entry in self.entries() if entry != text]
         del entries[historyLimit():]
+        self._write(entries)
+
+    def remove(self, text):
+        entries = self.entries()
+        if text not in entries:
+            return
+        entries = [entry for entry in entries if entry != text]
+        if entries:
+            self._write(entries)
+        else:
+            self.clear()
+
+    def _write(self, entries):
         try:
             data = '\n'.join(entries) + '\n'
             with open(self.path, 'wb') as f:
@@ -191,6 +204,9 @@ class SearchHistory(object):
         self._cache = (None, [])
 
     def clear(self):
-        if os.path.exists(self.path):
-            os.remove(self.path)
+        try:
+            if os.path.exists(self.path):
+                os.remove(self.path)
+        except OSError as e:
+            print('[NewVirtualKeyBoard] deleting the search history failed: %s' % e)
         self._cache = (None, [])

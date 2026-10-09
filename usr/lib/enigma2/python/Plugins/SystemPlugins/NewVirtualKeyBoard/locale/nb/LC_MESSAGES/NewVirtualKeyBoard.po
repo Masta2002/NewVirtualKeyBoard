@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - nb
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nb\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Trykk OK eller Exit for å avbryte!"
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Nedlastede språk: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Nedlastede språk: %d, mislykkede: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Tekstinntasting som på en mobil, når inndatafeltet er valgt"
+
+msgid "All languages are installed"
+msgstr "Alle språk er installert"
+
+msgid "All languages removed"
+msgstr "Alle språk er fjernet"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Bakgrunnsfarge"
+
+msgid "Black"
+msgstr "Svart"
+
+msgid "Blue - Shift"
+msgstr "Blå - Shift"
+
+msgid "Cancel"
+msgstr "Avbryt"
+
+msgid "Cancel execution?"
+msgstr "Avbryte kjøringen?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Tøm"
+
+msgid "Clear search history"
+msgstr "Tøm søkehistorikk"
+
+msgid "Console"
+msgstr "Konsoll"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "Standard"
+
+msgid "Delete the search history?"
+msgstr "Slette søkehistorikken?"
+
+msgid "Do you want to install it now?"
+msgstr "Vil du installere den nå?"
+
+msgid "Download all"
+msgstr "Last ned alle"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "Laste ned alle manglende språk (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Laster ned språk %d av %d ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Slå på/av søk etter nettoppdateringer"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "Kjøringen er ferdig!!"
+
+msgid "Execution progress:"
+msgstr "Kjøringens fremdrift:"
+
+msgid "Exit"
+msgstr "Avslutt"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Lukk uten å bruke teksten"
+
+msgid "Failed to download language, try later"
+msgstr "Kunne ikke laste ned språket, prøv igjen senere"
+
+msgid "Fast forward - Insert space"
+msgstr "Spol fremover - Sett inn mellomrom"
+
+msgid "Font size (-10 to +30)"
+msgstr "Skriftstørrelse (-10 til +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Grønn - Enter: bekreft teksten og lukk"
+
+msgid "Help"
+msgstr "Hjelp"
+
+msgid "Hide"
+msgstr "Skjul"
+
+msgid "Image virtual keyboard"
+msgstr "Imagets virtuelle tastatur"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Vis dette skjermbildet igjen"
+
+msgid "Install language"
+msgstr "Installer språk"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Installerer siste oppdatering, enigma startes etter installasjonen"
+
+msgid "Keyboard layout selection"
+msgstr "Valg av tastaturoppsett"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Språket er lastet ned, installasjonen avsluttes"
+
+msgid "Language removed from installed package"
+msgstr "Språket er fjernet fra den installerte pakken"
+
+msgid "Left"
+msgstr "Venstre"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Venstre / Høyre ved kanten av tastaturet - Bytt til forslagene eller søkehistorikken"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "Kunne ikke laste inn tastaturoppsettet %s"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Innstillinger, installer språk, tøm søkehistorikken"
+
+msgid "Mostly transparent"
+msgstr "Stort sett gjennomsiktig"
+
+msgid "New Virtual Keyboard"
+msgstr "Nytt virtuelt tastatur"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Nytt virtuelt tastatur - Originalkode SamSamSam (e2iplayer). Bidragsytere: mfaraj57 og Fairbird. Skin og endringer: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Innstillinger for Nytt virtuelt tastatur"
+
+msgid "New version"
+msgstr "Ny versjon"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "NewVirtualKeyBoard innstillinger"
+
+msgid "No language is installed"
+msgstr "Ingen språk er installert"
+
+msgid "Numeric keypad"
+msgstr "Numerisk tastatur"
+
+msgid "Numeric keypad for numbers"
+msgstr "Numerisk tastatur for tallfelt"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Skriv valgt tast / bruk valgt forslag eller historikkoppføring"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / GRØNN - godta, EXIT - avbryt"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Bytt mellom tastatur, forslag og søkehistorikk"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Tøm inntastet tekst"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Sett inn mellomrom"
+
+msgid "Press ok to install language"
+msgstr "Trykk OK for å installere språket"
+
+msgid "Press ok to remove language"
+msgstr "Trykk OK for å fjerne språket"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Forrige / Neste - Bytt mellom tastatur, forslag og søkehistorikk"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Rød - Slett bakover / i søkehistorikken: slett oppføringen"
+
+msgid "Remember last search entry"
+msgstr "Husk siste søk"
+
+msgid "Remove all"
+msgstr "Fjern alle"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "Fjerne alle installerte språk (%d)?"
+
+msgid "Restart GUI"
+msgstr "Start GUI på nytt"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "Starte enigma2 på nytt for å laste inn de nye innstillingene?"
+
+msgid "Rewind - Clear input text"
+msgstr "Spol tilbake - Tøm inntastet tekst"
+
+msgid "Right"
+msgstr "Høyre"
+
+msgid "Save"
+msgstr "Lagre"
+
+msgid "Search history"
+msgstr "Søkehistorikk"
+
+msgid "Search history entries (1-99999)"
+msgstr "Oppføringer i søkehistorikken (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Halvgjennomsiktig"
+
+msgid "Setup virtual keyboard"
+msgstr "Sett opp virtuelt tastatur"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Show flags"
+msgstr "Vis flagg"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Vis programtillegget i tilleggsoversikten"
+
+msgid "Show search history"
+msgstr "Vis søkehistorikk"
+
+msgid "Show suggestions"
+msgstr "Vis forslag"
+
+msgid "Suggestions"
+msgstr "Forslag"
+
+msgid "Suggestions provider"
+msgstr "Leverandør av forslag"
+
+msgid "Switching the keyboard failed"
+msgstr "Kunne ikke bytte tastatur"
+
+msgid "Text - Switch language"
+msgstr "Text - Bytt språk"
+
+msgid "Text field alignment"
+msgstr "Justering av tekstfeltet"
+
+msgid "Text input method-keyboard"
+msgstr "Tekstinntastingsmetode - tastatur"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "Sikkerhetskopien av imagets tastatur mangler, Nytt virtuelt tastatur forblir aktivt."
+
+msgid "Transparent"
+msgstr "Gjennomsiktig"
+
+msgid "Virtual Keyboard"
+msgstr "Virtuelt tastatur"
+
+msgid "Yellow - AltGr"
+msgstr "Gul - AltGr"
+
+msgid "is available"
+msgstr "er tilgjengelig"

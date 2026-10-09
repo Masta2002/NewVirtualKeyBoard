@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - bg
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: bg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Натиснете OK или Exit за отказ!"
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Изтеглени езици: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Изтеглени езици: %d, неуспешни: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Въвеждане на текст като на телефон, когато е избрано полето за въвеждане"
+
+msgid "All languages are installed"
+msgstr "Всички езици са инсталирани"
+
+msgid "All languages removed"
+msgstr "Всички езици са премахнати"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Цвят на фона"
+
+msgid "Black"
+msgstr "Черен"
+
+msgid "Blue - Shift"
+msgstr "Син - Shift"
+
+msgid "Cancel"
+msgstr "Отказ"
+
+msgid "Cancel execution?"
+msgstr "Прекъсване на изпълнението?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Изчисти"
+
+msgid "Clear search history"
+msgstr "Изчисти историята на търсенето"
+
+msgid "Console"
+msgstr "Конзола"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "По подразбиране"
+
+msgid "Delete the search history?"
+msgstr "Да се изтрие ли историята на търсенето?"
+
+msgid "Do you want to install it now?"
+msgstr "Желаете ли да я инсталирате сега?"
+
+msgid "Download all"
+msgstr "Изтегли всички"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "Да се изтеглят ли всички липсващи езици (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Изтегляне на език %d от %d ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Вкл./изкл. проверка за онлайн актуализации"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "Изпълнението завърши!!"
+
+msgid "Execution progress:"
+msgstr "Напредък на изпълнението:"
+
+msgid "Exit"
+msgstr "Изход"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Затваряне без въвеждане на текста"
+
+msgid "Failed to download language, try later"
+msgstr "Езикът не можа да бъде изтеглен, опитайте по-късно"
+
+msgid "Fast forward - Insert space"
+msgstr "Превъртане напред - Вмъкване на интервал"
+
+msgid "Font size (-10 to +30)"
+msgstr "Размер на шрифта (-10 до +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Зелен - Enter: потвърждаване на текста и затваряне"
+
+msgid "Help"
+msgstr "Помощ"
+
+msgid "Hide"
+msgstr "Скрий"
+
+msgid "Image virtual keyboard"
+msgstr "Вградена виртуална клавиатура на имиджа"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Повторно показване на този екран"
+
+msgid "Install language"
+msgstr "Инсталиране на език"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Инсталиране на последната актуализация, enigma ще бъде стартирана след инсталирането"
+
+msgid "Keyboard layout selection"
+msgstr "Избор на клавиатурна подредба"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Езикът е изтеглен успешно, изход от инсталирането"
+
+msgid "Language removed from installed package"
+msgstr "Езикът е премахнат от инсталирания пакет"
+
+msgid "Left"
+msgstr "Ляво"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Ляво / Дясно в края на клавиатурата - Преминаване към предложенията или историята на търсенето"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "Клавиатурната подредба %s не можа да бъде заредена"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Настройки, инсталиране на езици, изчистване на историята на търсенето"
+
+msgid "Mostly transparent"
+msgstr "Почти прозрачен"
+
+msgid "New Virtual Keyboard"
+msgstr "Нова виртуална клавиатура"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Нова виртуална клавиатура - Оригинален код SamSamSam (e2iplayer). Сътрудници: mfaraj57 и Fairbird. Скин и промени: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Настройки на Нова виртуална клавиатура"
+
+msgid "New version"
+msgstr "Нова версия"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "Настройки на NewVirtualKeyBoard"
+
+msgid "No language is installed"
+msgstr "Няма инсталиран език"
+
+msgid "Numeric keypad"
+msgstr "Цифрова клавиатура"
+
+msgid "Numeric keypad for numbers"
+msgstr "Цифрова клавиатура за числа"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Въвеждане на избрания клавиш / избраното предложение или запис от историята"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / ЗЕЛЕН - приемане, EXIT - отказ"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Превключване между клавиатура, предложения и история на търсенето"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Изчистване на въведения текст"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Вмъкване на интервал"
+
+msgid "Press ok to install language"
+msgstr "Натиснете OK, за да инсталирате езика"
+
+msgid "Press ok to remove language"
+msgstr "Натиснете OK, за да премахнете езика"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Предишен / Следващ - Превключване между клавиатура, предложения и история на търсенето"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Червен - Backspace / в историята на търсенето: изтриване на записа"
+
+msgid "Remember last search entry"
+msgstr "Запомняне на последното търсене"
+
+msgid "Remove all"
+msgstr "Премахни всички"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "Да се премахнат ли всички инсталирани езици (%d)?"
+
+msgid "Restart GUI"
+msgstr "Рестарт на GUI"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "Рестартиране на enigma2 за зареждане на новите настройки?"
+
+msgid "Rewind - Clear input text"
+msgstr "Превъртане назад - Изчистване на въведения текст"
+
+msgid "Right"
+msgstr "Дясно"
+
+msgid "Save"
+msgstr "Запази"
+
+msgid "Search history"
+msgstr "История на търсенето"
+
+msgid "Search history entries (1-99999)"
+msgstr "Записи в историята на търсенето (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Полупрозрачен"
+
+msgid "Setup virtual keyboard"
+msgstr "Настройка на виртуалната клавиатура"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Show flags"
+msgstr "Показване на флагове"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Показване на плъгина в браузъра на плъгини"
+
+msgid "Show search history"
+msgstr "Показване на историята на търсенето"
+
+msgid "Show suggestions"
+msgstr "Показване на предложения"
+
+msgid "Suggestions"
+msgstr "Предложения"
+
+msgid "Suggestions provider"
+msgstr "Доставчик на предложения"
+
+msgid "Switching the keyboard failed"
+msgstr "Превключването на клавиатурата е неуспешно"
+
+msgid "Text - Switch language"
+msgstr "Text - Смяна на езика"
+
+msgid "Text field alignment"
+msgstr "Подравняване на текстовото поле"
+
+msgid "Text input method-keyboard"
+msgstr "Метод за въвеждане на текст - клавиатура"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "Резервното копие на клавиатурата на имиджа липсва, Нова виртуална клавиатура остава активна."
+
+msgid "Transparent"
+msgstr "Прозрачен"
+
+msgid "Virtual Keyboard"
+msgstr "Виртуална клавиатура"
+
+msgid "Yellow - AltGr"
+msgstr "Жълт - AltGr"
+
+msgid "is available"
+msgstr "е налична"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: 中文翻译由DeepSeek-V3完成\n"
 "Language-Team: \n"
@@ -19,123 +19,125 @@ msgid ""
 "\n"
 "Press OK or Exit to abort!"
 msgstr ""
+"\n"
+"按 OK 或 Exit 中止！"
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "已下载 %d 种语言"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "已下载 %d 种语言，%d 种失败"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
-msgstr ""
+msgstr "0-9 - 选中输入框时，像手机一样输入文字"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "所有语言均已安装"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "已移除所有语言"
 
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 msgid "Background color"
-msgstr ""
+msgstr "背景颜色"
 
 msgid "Black"
-msgstr ""
+msgstr "黑色"
 
 msgid "Blue - Shift"
-msgstr ""
+msgstr "蓝色 - Shift"
 
 msgid "Cancel"
 msgstr "取消"
 
 msgid "Cancel execution?"
-msgstr ""
+msgstr "取消执行？"
 
 msgid "Caps"
-msgstr ""
+msgstr "Caps"
 
 msgid "Clear"
-msgstr ""
+msgstr "清空"
 
 msgid "Clear search history"
-msgstr ""
+msgstr "清除搜索历史"
 
 msgid "Console"
-msgstr ""
+msgstr "控制台"
 
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgid "Default"
-msgstr ""
+msgstr "默认"
 
 msgid "Delete the search history?"
-msgstr ""
+msgstr "删除搜索历史？"
 
 msgid "Do you want to install it now?"
-msgstr "是否立即安装"
+msgstr "是否立即安装？"
 
 msgid "Download all"
-msgstr ""
+msgstr "全部下载"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "下载全部 %d 种缺少的语言？"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "正在下载语言 %d / %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "启用/禁用检查在线更新"
 
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #. TRANSLATORS: key caps of the on-screen keyboard - keep them as
 #. short as the English ones, the keys are small
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 msgid "Execution finished!!"
-msgstr ""
+msgstr "执行完成！！"
 
 msgid "Execution progress:"
-msgstr ""
+msgstr "执行进度："
 
 msgid "Exit"
-msgstr ""
+msgstr "退出"
 
 msgid "Exit - Close without taking the text"
-msgstr ""
+msgstr "Exit - 关闭且不采用文本"
 
 msgid "Failed to download language, try later"
 msgstr "下载语言失败，请稍后重试"
 
 msgid "Fast forward - Insert space"
-msgstr ""
+msgstr "快进 - 插入空格"
 
 msgid "Font size (-10 to +30)"
-msgstr ""
+msgstr "字体大小（-10 至 +30）"
 
 msgid "Green - Enter: confirm the text and close"
-msgstr ""
+msgstr "绿色 - Enter：确认文本并关闭"
 
 msgid "Help"
-msgstr ""
+msgstr "帮助"
 
 msgid "Hide"
-msgstr ""
+msgstr "隐藏"
 
 msgid "Image virtual keyboard"
-msgstr "图像虚拟键盘"
+msgstr "镜像自带虚拟键盘"
 
 msgid "Info - Show this screen again"
-msgstr "信息 - 再次显示此屏幕"
+msgstr "Info - 再次显示此屏幕"
 
 msgid "Install language"
 msgstr "安装语言"
@@ -144,7 +146,7 @@ msgid "Installing last update, enigma will be started after install"
 msgstr "正在安装最新更新，安装后将启动enigma"
 
 msgid "Keyboard layout selection"
-msgstr ""
+msgstr "键盘布局选择"
 
 msgid "Language downloaded successfully, exit from install"
 msgstr "语言下载成功，退出安装"
@@ -153,57 +155,57 @@ msgid "Language removed from installed package"
 msgstr "语言已从已安装包中移除"
 
 msgid "Left"
-msgstr ""
+msgstr "左"
 
 msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
-msgstr ""
+msgstr "在键盘边缘按左/右 - 切换到建议或搜索历史"
 
 #, python-format
 msgid "Loading the keyboard layout %s failed"
-msgstr ""
+msgstr "加载键盘布局 %s 失败"
 
 msgid "Menu - Settings, install languages, clear the search history"
-msgstr ""
+msgstr "Menu - 设置、安装语言、清除搜索历史"
 
 msgid "Mostly transparent"
-msgstr ""
+msgstr "大部分透明"
 
 msgid "New Virtual Keyboard"
-msgstr "新建虚拟键盘"
+msgstr "新虚拟键盘"
 
 msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
-msgstr "新建虚拟键盘 - 原始代码 SamSamSam (e2iplayer)。贡献者：mfaraj57 和 Fairbird。皮肤与修改：KiddaC"
+msgstr "新虚拟键盘 - 原始代码 SamSamSam (e2iplayer)。贡献者：mfaraj57 和 Fairbird。皮肤与修改：KiddaC"
 
 msgid "New Virtual Keyboard Settings"
-msgstr ""
+msgstr "新虚拟键盘设置"
 
 msgid "New version"
 msgstr "新版本"
 
 #, python-format
 msgid "NewVirtualKeyBoard  V %s"
-msgstr ""
+msgstr "NewVirtualKeyBoard  V %s"
 
 msgid "NewVirtualKeyBoard setup"
-msgstr ""
+msgstr "NewVirtualKeyBoard 设置"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "未安装任何语言"
 
 msgid "Numeric keypad"
-msgstr ""
+msgstr "数字键盘"
 
 msgid "Numeric keypad for numbers"
-msgstr ""
+msgstr "数字输入使用数字键盘"
 
 msgid "OK - Type the selected key / take the selected suggestion or history entry"
-msgstr ""
+msgstr "OK - 输入所选按键 / 采用所选建议或历史条目"
 
 msgid "OK / GREEN - accept, EXIT - cancel"
-msgstr ""
+msgstr "OK / 绿色 - 确认，EXIT - 取消"
 
 msgid "PVR - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "PVR - 在键盘、建议和搜索历史之间切换"
 
 msgid "Page Down - Clear input text"
 msgstr "下页 - 清除输入文本"
@@ -212,38 +214,38 @@ msgid "Page Up - Insert space"
 msgstr "上页 - 插入空格"
 
 msgid "Press ok to install language"
-msgstr "按确定安装语言"
+msgstr "按 OK 安装语言"
 
 msgid "Press ok to remove language"
-msgstr "按确定移除语言"
+msgstr "按 OK 移除语言"
 
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "上一个 / 下一个 - 在键盘、建议和搜索历史之间切换"
 
-msgid "Red - Backspace"
-msgstr ""
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "红色 - 退格 / 在搜索历史中：删除该条目"
 
 msgid "Remember last search entry"
-msgstr ""
+msgstr "记住上次搜索内容"
 
 msgid "Remove all"
-msgstr ""
+msgstr "全部移除"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "移除全部 %d 种已安装的语言？"
 
 msgid "Restart GUI"
-msgstr ""
+msgstr "重启界面"
 
 msgid "Restart enigma2 to load new settings?"
 msgstr "重新启动enigma2以加载新设置？"
 
 msgid "Rewind - Clear input text"
-msgstr ""
+msgstr "快退 - 清除输入文本"
 
 msgid "Right"
-msgstr ""
+msgstr "右"
 
 msgid "Save"
 msgstr "保存"
@@ -252,58 +254,58 @@ msgid "Search history"
 msgstr "搜索历史"
 
 msgid "Search history entries (1-99999)"
-msgstr ""
+msgstr "搜索历史条目数（1-99999）"
 
 msgid "Semi-transparent"
-msgstr ""
+msgstr "半透明"
 
 msgid "Setup virtual keyboard"
-msgstr ""
+msgstr "设置虚拟键盘"
 
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 msgid "Show flags"
-msgstr ""
+msgstr "显示国旗"
 
 msgid "Show plugin in Plugin Browser"
 msgstr "在插件浏览器中显示插件"
 
 msgid "Show search history"
-msgstr ""
+msgstr "显示搜索历史"
 
 msgid "Show suggestions"
-msgstr ""
+msgstr "显示建议"
 
 msgid "Suggestions"
-msgstr ""
+msgstr "建议"
 
 msgid "Suggestions provider"
-msgstr ""
+msgstr "建议提供者"
 
 msgid "Switching the keyboard failed"
-msgstr ""
+msgstr "切换键盘失败"
 
 msgid "Text - Switch language"
-msgstr ""
+msgstr "Text - 切换语言"
 
 msgid "Text field alignment"
-msgstr ""
+msgstr "文本框对齐"
 
 msgid "Text input method-keyboard"
 msgstr "文本输入法-键盘"
 
 msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
-msgstr ""
+msgstr "缺少镜像自带键盘的备份，新虚拟键盘将保持启用。"
 
 msgid "Transparent"
-msgstr ""
+msgstr "透明"
 
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "虚拟键盘"
 
 msgid "Yellow - AltGr"
-msgstr ""
+msgstr "黄色 - AltGr"
 
 msgid "is available"
 msgstr "已可用"

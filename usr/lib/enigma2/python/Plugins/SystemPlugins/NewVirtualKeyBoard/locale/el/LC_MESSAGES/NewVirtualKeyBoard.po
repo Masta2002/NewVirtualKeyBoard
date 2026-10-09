@@ -3,12 +3,11 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-10-02 22:01+0300\n"
 "Last-Translator: \n"
 "Language-Team: giorbak\n"
@@ -114,7 +113,7 @@ msgid "Execution progress:"
 msgstr "Πρόοδος εκτέλεσης:"
 
 msgid "Exit"
-msgstr "Exit"
+msgstr "Έξοδος"
 
 msgid "Exit - Close without taking the text"
 msgstr "Exit - Κλείσιμο χωρίς λήψη του κειμένου"
@@ -132,7 +131,7 @@ msgid "Green - Enter: confirm the text and close"
 msgstr "Πράσινο - Enter: επιβεβαίωση του κειμένου και κλείσιμο"
 
 msgid "Help"
-msgstr "Help"
+msgstr "Βοήθεια"
 
 msgid "Hide"
 msgstr "Απόκρυψη"
@@ -226,8 +225,8 @@ msgstr "Πατήστε OK για να αφαιρέσετε τη γλώσσα"
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
 msgstr "Προηγούμενο / Επόμενο - Εναλλαγή μεταξύ πληκτρολογίου, προτάσεων και ιστορικού αναζήτησης"
 
-msgid "Red - Backspace"
-msgstr "Κόκκινο - Backspace"
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Κόκκινο - Backspace / στο ιστορικό αναζητήσεων: διαγραφή της καταχώρισης"
 
 msgid "Remember last search entry"
 msgstr "Απομνημόνευση τελευταίας καταχώρισης αναζήτησης"

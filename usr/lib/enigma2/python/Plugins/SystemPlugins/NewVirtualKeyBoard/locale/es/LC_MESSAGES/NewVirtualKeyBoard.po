@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - es
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Pulse OK o Exit para cancelar."
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Idiomas descargados: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Idiomas descargados: %d, fallidos: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Escribir como en un teléfono, con el campo de entrada seleccionado"
+
+msgid "All languages are installed"
+msgstr "Todos los idiomas están instalados"
+
+msgid "All languages removed"
+msgstr "Se han eliminado todos los idiomas"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Color de fondo"
+
+msgid "Black"
+msgstr "Negro"
+
+msgid "Blue - Shift"
+msgstr "Azul - Mayús"
+
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgid "Cancel execution?"
+msgstr "¿Cancelar la ejecución?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Borrar"
+
+msgid "Clear search history"
+msgstr "Borrar historial de búsqueda"
+
+msgid "Console"
+msgstr "Consola"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "Predeterminado"
+
+msgid "Delete the search history?"
+msgstr "¿Borrar el historial de búsqueda?"
+
+msgid "Do you want to install it now?"
+msgstr "¿Desea instalarlo ahora?"
+
+msgid "Download all"
+msgstr "Descargar todos"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "¿Descargar todos los idiomas que faltan (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Descargando idioma %d de %d ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Activar/desactivar la búsqueda de actualizaciones en línea"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "¡¡Ejecución finalizada!!"
+
+msgid "Execution progress:"
+msgstr "Progreso de la ejecución:"
+
+msgid "Exit"
+msgstr "Salir"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Cerrar sin aceptar el texto"
+
+msgid "Failed to download language, try later"
+msgstr "No se pudo descargar el idioma, inténtelo más tarde"
+
+msgid "Fast forward - Insert space"
+msgstr "Avance rápido - Insertar espacio"
+
+msgid "Font size (-10 to +30)"
+msgstr "Tamaño de fuente (-10 a +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Verde - Enter: confirmar el texto y cerrar"
+
+msgid "Help"
+msgstr "Ayuda"
+
+msgid "Hide"
+msgstr "Ocultar"
+
+msgid "Image virtual keyboard"
+msgstr "Teclado virtual de la imagen"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Mostrar de nuevo esta pantalla"
+
+msgid "Install language"
+msgstr "Instalar idioma"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Instalando la última actualización, enigma se reiniciará después de la instalación"
+
+msgid "Keyboard layout selection"
+msgstr "Selección de distribución del teclado"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Idioma descargado correctamente, saliendo de la instalación"
+
+msgid "Language removed from installed package"
+msgstr "Idioma eliminado del paquete instalado"
+
+msgid "Left"
+msgstr "Izquierda"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Izquierda / Derecha en el borde del teclado - Cambiar a las sugerencias o al historial de búsqueda"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "No se pudo cargar la distribución del teclado %s"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Configuración, instalar idiomas, borrar el historial de búsqueda"
+
+msgid "Mostly transparent"
+msgstr "Casi transparente"
+
+msgid "New Virtual Keyboard"
+msgstr "Nuevo Teclado Virtual"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Nuevo Teclado Virtual - Código original SamSamSam (e2iplayer). Colaboradores: mfaraj57 y Fairbird. Skin y mejoras: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Configuración de Nuevo Teclado Virtual"
+
+msgid "New version"
+msgstr "Nueva versión"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "Configuración de NewVirtualKeyBoard"
+
+msgid "No language is installed"
+msgstr "No hay ningún idioma instalado"
+
+msgid "Numeric keypad"
+msgstr "Teclado numérico"
+
+msgid "Numeric keypad for numbers"
+msgstr "Teclado numérico para campos numéricos"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Escribir la tecla seleccionada / usar la sugerencia o entrada del historial seleccionada"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / VERDE - aceptar, EXIT - cancelar"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Cambiar entre teclado, sugerencias e historial de búsqueda"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Borrar el texto introducido"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Insertar espacio"
+
+msgid "Press ok to install language"
+msgstr "Pulse OK para instalar el idioma"
+
+msgid "Press ok to remove language"
+msgstr "Pulse OK para eliminar el idioma"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Anterior / Siguiente - Cambiar entre teclado, sugerencias e historial de búsqueda"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Rojo - Retroceso / en el historial de búsqueda: eliminar la entrada"
+
+msgid "Remember last search entry"
+msgstr "Recordar la última búsqueda"
+
+msgid "Remove all"
+msgstr "Eliminar todos"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "¿Eliminar todos los idiomas instalados (%d)?"
+
+msgid "Restart GUI"
+msgstr "Reiniciar GUI"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "¿Reiniciar enigma2 para cargar la nueva configuración?"
+
+msgid "Rewind - Clear input text"
+msgstr "Retroceso rápido - Borrar el texto introducido"
+
+msgid "Right"
+msgstr "Derecha"
+
+msgid "Save"
+msgstr "Guardar"
+
+msgid "Search history"
+msgstr "Historial de búsqueda"
+
+msgid "Search history entries (1-99999)"
+msgstr "Entradas del historial de búsqueda (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Semitransparente"
+
+msgid "Setup virtual keyboard"
+msgstr "Configurar teclado virtual"
+
+msgid "Shift"
+msgstr "Mayús"
+
+msgid "Show flags"
+msgstr "Mostrar banderas"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Mostrar el plugin en el navegador de plugins"
+
+msgid "Show search history"
+msgstr "Mostrar historial de búsqueda"
+
+msgid "Show suggestions"
+msgstr "Mostrar sugerencias"
+
+msgid "Suggestions"
+msgstr "Sugerencias"
+
+msgid "Suggestions provider"
+msgstr "Proveedor de sugerencias"
+
+msgid "Switching the keyboard failed"
+msgstr "No se pudo cambiar el teclado"
+
+msgid "Text - Switch language"
+msgstr "Text - Cambiar idioma"
+
+msgid "Text field alignment"
+msgstr "Alineación del campo de texto"
+
+msgid "Text input method-keyboard"
+msgstr "Método de entrada de texto - teclado"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "Falta la copia de seguridad del teclado de la imagen, el Nuevo Teclado Virtual sigue activo."
+
+msgid "Transparent"
+msgstr "Transparente"
+
+msgid "Virtual Keyboard"
+msgstr "Teclado virtual"
+
+msgid "Yellow - AltGr"
+msgstr "Amarillo - AltGr"
+
+msgid "is available"
+msgstr "está disponible"

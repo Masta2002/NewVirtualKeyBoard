@@ -27,7 +27,7 @@ Made with a lot of 💞 for the Enigma2 community.
 ![Images](https://img.shields.io/badge/Images-openATV%20%7C%20OpenPLi%20%7C%20OpenViX%20%7C%20VTi%20%7C%20DreamOS-orange.svg)
 ![Resolution](https://img.shields.io/badge/Skin-HD%20%7C%20FHD%20%7C%20WQHD-orange.svg)
 ![Layouts](https://img.shields.io/badge/Keyboard%20layouts-218-brightgreen.svg)
-[![Translations](https://img.shields.io/badge/Translations-10-brightgreen.svg)](usr/lib/enigma2/python/Plugins/SystemPlugins/NewVirtualKeyBoard/locale)
+[![Translations](https://img.shields.io/badge/Translations-22-brightgreen.svg)](usr/lib/enigma2/python/Plugins/SystemPlugins/NewVirtualKeyBoard/locale)
 [![GitHub stars](https://img.shields.io/github/stars/Masta2002/NewVirtualKeyBoard?style=flat)](https://github.com/Masta2002/NewVirtualKeyBoard/stargazers)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](https://github.com/Masta2002/NewVirtualKeyBoard/pulls)
 [![Issues](https://img.shields.io/github/issues/Masta2002/NewVirtualKeyBoard?color=blue&style=flat)](https://github.com/Masta2002/NewVirtualKeyBoard/issues)
@@ -66,7 +66,8 @@ image's own keyboard back.
   RED removes all installed languages, GREEN downloads all missing ones
 - 🔎 search **suggestions** from Google, YouTube, Bing, DuckDuckGo or IMDb, in
   the language of the layout
-- 🕘 **search history**, sorted while typing, with a size limit
+- 🕘 **search history**, sorted while typing, with a size limit; RED deletes
+  single entries
 - 🔢 **numeric keypad** for number and PIN fields
 - ✍️ dead keys (accents), AltGr, Shift, Caps Lock, multi-tap input with 0-9,
   USB keyboards
@@ -83,7 +84,7 @@ image's own keyboard back.
 |---|---|
 | ⏺️ OK | type the selected key / take the selected suggestion or history entry |
 | 🟢 GREEN | Enter: confirm the text and close |
-| 🔴 RED | Backspace |
+| 🔴 RED | Backspace; in the search history: delete the selected entry |
 | 🟡 YELLOW | AltGr |
 | 🔵 BLUE | Shift |
 | 🔤 TEXT | next installed keyboard layout |
@@ -127,7 +128,8 @@ edit the `.po` of their language.
 
 Original code SamSamSam (E2iPlayer). Contributors: mfaraj57 and RAED
 (fairbird), madmax88 and the linuxsat-support forum. Skin and amends:
-KiddaC. Ideas: giorbak and urie; Greek translation: giorbak. Flags partly from
+KiddaC. Ideas: giorbak and urie; Greek translation: giorbak; Polish
+translation: Adam Farmer. Flags partly from
 [flag-icons](https://github.com/lipis/flag-icons) (MIT, see
 `skins/FLAGS-LICENSE.txt`).
 

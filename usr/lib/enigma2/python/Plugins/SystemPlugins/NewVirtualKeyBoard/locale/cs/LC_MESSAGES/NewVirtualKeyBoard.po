@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: Warder\n"
 "Language-Team: \n"
@@ -19,123 +19,125 @@ msgid ""
 "\n"
 "Press OK or Exit to abort!"
 msgstr ""
+"\n"
+"Stiskněte OK nebo Exit pro ukončení!"
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "Staženo jazyků: %d"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "Staženo jazyků: %d, neúspěšných: %d"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
-msgstr ""
+msgstr "0-9 - Zadávání textu jako na telefonu, když je vybráno vstupní pole"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "Všechny jazyky jsou nainstalovány"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "Všechny jazyky byly odebrány"
 
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 msgid "Background color"
-msgstr ""
+msgstr "Barva pozadí"
 
 msgid "Black"
-msgstr ""
+msgstr "Černá"
 
 msgid "Blue - Shift"
-msgstr ""
+msgstr "Modrá - Shift"
 
 msgid "Cancel"
 msgstr "Zrušit"
 
 msgid "Cancel execution?"
-msgstr ""
+msgstr "Zrušit provádění?"
 
 msgid "Caps"
-msgstr ""
+msgstr "Caps"
 
 msgid "Clear"
-msgstr ""
+msgstr "Smazat"
 
 msgid "Clear search history"
-msgstr ""
+msgstr "Vymazat historii vyhledávání"
 
 msgid "Console"
-msgstr ""
+msgstr "Konzole"
 
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgid "Default"
-msgstr ""
+msgstr "Výchozí"
 
 msgid "Delete the search history?"
-msgstr ""
+msgstr "Smazat historii vyhledávání?"
 
 msgid "Do you want to install it now?"
-msgstr "Chci nyní nainstalovat"
+msgstr "Chcete ji nyní nainstalovat?"
 
 msgid "Download all"
-msgstr ""
+msgstr "Stáhnout vše"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "Stáhnout všechny chybějící jazyky (%d)?"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "Stahování jazyka %d z %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Povolit/Zakázat kontrolu online aktualizací"
 
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #. TRANSLATORS: key caps of the on-screen keyboard - keep them as
 #. short as the English ones, the keys are small
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 msgid "Execution finished!!"
-msgstr ""
+msgstr "Provádění dokončeno!!"
 
 msgid "Execution progress:"
-msgstr ""
+msgstr "Průběh provádění:"
 
 msgid "Exit"
-msgstr ""
+msgstr "Konec"
 
 msgid "Exit - Close without taking the text"
-msgstr ""
+msgstr "Exit - Zavřít bez převzetí textu"
 
 msgid "Failed to download language, try later"
 msgstr "Stažení jazyka se nezdařilo, zkuste to později"
 
 msgid "Fast forward - Insert space"
-msgstr ""
+msgstr "Přetočit vpřed - Vložit mezeru"
 
 msgid "Font size (-10 to +30)"
-msgstr ""
+msgstr "Velikost písma (-10 až +30)"
 
 msgid "Green - Enter: confirm the text and close"
-msgstr ""
+msgstr "Zelená - Enter: potvrdit text a zavřít"
 
 msgid "Help"
-msgstr ""
+msgstr "Nápověda"
 
 msgid "Hide"
-msgstr ""
+msgstr "Skrýt"
 
 msgid "Image virtual keyboard"
-msgstr "Obrázek virtuální klávesnice"
+msgstr "Virtuální klávesnice image"
 
 msgid "Info - Show this screen again"
-msgstr "Informace - Zobrazit tuto obrazovku znovu"
+msgstr "Info - Zobrazit tuto obrazovku znovu"
 
 msgid "Install language"
 msgstr "Nainstalovat jazyk"
@@ -144,7 +146,7 @@ msgid "Installing last update, enigma will be started after install"
 msgstr "Instalace poslední aktualizace, enigma se spustí po instalaci"
 
 msgid "Keyboard layout selection"
-msgstr ""
+msgstr "Výběr rozložení klávesnice"
 
 msgid "Language downloaded successfully, exit from install"
 msgstr "Jazyk byl úspěšně stažen, ukončete instalaci"
@@ -153,20 +155,20 @@ msgid "Language removed from installed package"
 msgstr "Jazyk byl z nainstalovaného balíčku odebrán"
 
 msgid "Left"
-msgstr ""
+msgstr "Vlevo"
 
 msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
-msgstr ""
+msgstr "Vlevo / Vpravo na okraji klávesnice - Přepnout na návrhy nebo historii vyhledávání"
 
 #, python-format
 msgid "Loading the keyboard layout %s failed"
-msgstr ""
+msgstr "Načtení rozložení klávesnice %s se nezdařilo"
 
 msgid "Menu - Settings, install languages, clear the search history"
-msgstr ""
+msgstr "Menu - Nastavení, instalace jazyků, vymazání historie vyhledávání"
 
 msgid "Mostly transparent"
-msgstr ""
+msgstr "Převážně průhledné"
 
 msgid "New Virtual Keyboard"
 msgstr "Nová virtuální klávesnice"
@@ -175,35 +177,35 @@ msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors:
 msgstr "Nová virtuální klávesnice - Původní kód SamSamSam (e2iplayer). Přispěvatelé: mfaraj57 a Fairbird. Skin a úpravy: KiddaC"
 
 msgid "New Virtual Keyboard Settings"
-msgstr ""
+msgstr "Nastavení Nové virtuální klávesnice"
 
 msgid "New version"
 msgstr "Nová verze"
 
 #, python-format
 msgid "NewVirtualKeyBoard  V %s"
-msgstr ""
+msgstr "NewVirtualKeyBoard  V %s"
 
 msgid "NewVirtualKeyBoard setup"
-msgstr ""
+msgstr "Nastavení NewVirtualKeyBoard"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "Není nainstalován žádný jazyk"
 
 msgid "Numeric keypad"
-msgstr ""
+msgstr "Numerická klávesnice"
 
 msgid "Numeric keypad for numbers"
-msgstr ""
+msgstr "Numerická klávesnice pro čísla"
 
 msgid "OK - Type the selected key / take the selected suggestion or history entry"
-msgstr ""
+msgstr "OK - Napsat vybranou klávesu / převzít vybraný návrh nebo položku historie"
 
 msgid "OK / GREEN - accept, EXIT - cancel"
-msgstr ""
+msgstr "OK / ZELENÁ - potvrdit, EXIT - zrušit"
 
 msgid "PVR - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "PVR - Přepínat mezi klávesnicí, návrhy a historií vyhledávání"
 
 msgid "Page Down - Clear input text"
 msgstr "Page Down - Vymazat zadaný text"
@@ -218,32 +220,32 @@ msgid "Press ok to remove language"
 msgstr "Stiskněte OK pro odebrání jazyka"
 
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "Předchozí / Další - Přepínat mezi klávesnicí, návrhy a historií vyhledávání"
 
-msgid "Red - Backspace"
-msgstr ""
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Červená - Backspace / v historii vyhledávání: smazat položku"
 
 msgid "Remember last search entry"
-msgstr ""
+msgstr "Pamatovat si poslední hledání"
 
 msgid "Remove all"
-msgstr ""
+msgstr "Odebrat vše"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "Odebrat všechny nainstalované jazyky (%d)?"
 
 msgid "Restart GUI"
-msgstr ""
+msgstr "Restartovat GUI"
 
 msgid "Restart enigma2 to load new settings?"
 msgstr "Restartovat enigma2 pro načtení nových nastavení?"
 
 msgid "Rewind - Clear input text"
-msgstr ""
+msgstr "Přetočit zpět - Vymazat zadaný text"
 
 msgid "Right"
-msgstr ""
+msgstr "Vpravo"
 
 msgid "Save"
 msgstr "Uložit"
@@ -252,58 +254,58 @@ msgid "Search history"
 msgstr "Historie vyhledávání"
 
 msgid "Search history entries (1-99999)"
-msgstr ""
+msgstr "Počet položek historie vyhledávání (1-99999)"
 
 msgid "Semi-transparent"
-msgstr ""
+msgstr "Poloprůhledné"
 
 msgid "Setup virtual keyboard"
-msgstr ""
+msgstr "Nastavení virtuální klávesnice"
 
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 msgid "Show flags"
-msgstr ""
+msgstr "Zobrazit vlajky"
 
 msgid "Show plugin in Plugin Browser"
 msgstr "Zobrazit plugin v prohlížeči pluginů"
 
 msgid "Show search history"
-msgstr ""
+msgstr "Zobrazit historii vyhledávání"
 
 msgid "Show suggestions"
-msgstr ""
+msgstr "Zobrazit návrhy"
 
 msgid "Suggestions"
-msgstr ""
+msgstr "Návrhy"
 
 msgid "Suggestions provider"
-msgstr ""
+msgstr "Poskytovatel návrhů"
 
 msgid "Switching the keyboard failed"
-msgstr ""
+msgstr "Přepnutí klávesnice se nezdařilo"
 
 msgid "Text - Switch language"
-msgstr ""
+msgstr "Text - Přepnout jazyk"
 
 msgid "Text field alignment"
-msgstr ""
+msgstr "Zarovnání textového pole"
 
 msgid "Text input method-keyboard"
 msgstr "Metoda zadávání textu - klávesnice"
 
 msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
-msgstr ""
+msgstr "Záloha klávesnice image chybí, Nová virtuální klávesnice zůstává aktivní."
 
 msgid "Transparent"
-msgstr ""
+msgstr "Průhledné"
 
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Virtuální klávesnice"
 
 msgid "Yellow - AltGr"
-msgstr ""
+msgstr "Žlutá - AltGr"
 
 msgid "is available"
 msgstr "je k dispozici"

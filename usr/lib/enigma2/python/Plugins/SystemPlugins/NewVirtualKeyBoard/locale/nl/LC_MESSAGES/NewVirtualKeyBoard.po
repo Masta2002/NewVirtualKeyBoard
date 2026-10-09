@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - nl
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Druk op OK of Exit om af te breken!"
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Talen gedownload: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Talen gedownload: %d, mislukt: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Tekst invoeren zoals op een telefoon, als het invoerveld geselecteerd is"
+
+msgid "All languages are installed"
+msgstr "Alle talen zijn geïnstalleerd"
+
+msgid "All languages removed"
+msgstr "Alle talen verwijderd"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Achtergrondkleur"
+
+msgid "Black"
+msgstr "Zwart"
+
+msgid "Blue - Shift"
+msgstr "Blauw - Shift"
+
+msgid "Cancel"
+msgstr "Annuleren"
+
+msgid "Cancel execution?"
+msgstr "Uitvoering annuleren?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Wis"
+
+msgid "Clear search history"
+msgstr "Zoekgeschiedenis wissen"
+
+msgid "Console"
+msgstr "Console"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "Standaard"
+
+msgid "Delete the search history?"
+msgstr "Zoekgeschiedenis verwijderen?"
+
+msgid "Do you want to install it now?"
+msgstr "Wilt u deze nu installeren?"
+
+msgid "Download all"
+msgstr "Alles downloaden"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "Alle ontbrekende talen downloaden (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Taal %d van %d downloaden ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Online controle op updates in-/uitschakelen"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "Uitvoering voltooid!!"
+
+msgid "Execution progress:"
+msgstr "Voortgang van de uitvoering:"
+
+msgid "Exit"
+msgstr "Sluit"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Sluiten zonder de tekst over te nemen"
+
+msgid "Failed to download language, try later"
+msgstr "Downloaden van de taal mislukt, probeer het later opnieuw"
+
+msgid "Fast forward - Insert space"
+msgstr "Vooruitspoelen - Spatie invoegen"
+
+msgid "Font size (-10 to +30)"
+msgstr "Lettergrootte (-10 tot +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Groen - Enter: tekst bevestigen en sluiten"
+
+msgid "Help"
+msgstr "Help"
+
+msgid "Hide"
+msgstr "Verberg"
+
+msgid "Image virtual keyboard"
+msgstr "Virtueel toetsenbord van het image"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Dit scherm opnieuw tonen"
+
+msgid "Install language"
+msgstr "Taal installeren"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Laatste update wordt geïnstalleerd, enigma wordt na de installatie herstart"
+
+msgid "Keyboard layout selection"
+msgstr "Toetsenbordindeling kiezen"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Taal succesvol gedownload, installatie wordt afgesloten"
+
+msgid "Language removed from installed package"
+msgstr "Taal verwijderd uit het geïnstalleerde pakket"
+
+msgid "Left"
+msgstr "Links"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Links / Rechts aan de rand van het toetsenbord - Naar de suggesties of de zoekgeschiedenis gaan"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "Laden van toetsenbordindeling %s mislukt"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Instellingen, talen installeren, zoekgeschiedenis wissen"
+
+msgid "Mostly transparent"
+msgstr "Grotendeels transparant"
+
+msgid "New Virtual Keyboard"
+msgstr "Nieuw Virtueel Toetsenbord"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Nieuw Virtueel Toetsenbord - Originele code SamSamSam (e2iplayer). Bijdragers: mfaraj57 en Fairbird. Skin en aanpassingen: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Instellingen Nieuw Virtueel Toetsenbord"
+
+msgid "New version"
+msgstr "Nieuwe versie"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "NewVirtualKeyBoard instellingen"
+
+msgid "No language is installed"
+msgstr "Geen taal geïnstalleerd"
+
+msgid "Numeric keypad"
+msgstr "Numeriek toetsenblok"
+
+msgid "Numeric keypad for numbers"
+msgstr "Numeriek toetsenblok voor getallen"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Geselecteerde toets typen / geselecteerde suggestie of geschiedenisitem overnemen"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / GROEN - accepteren, EXIT - annuleren"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Wisselen tussen toetsenbord, suggesties en zoekgeschiedenis"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Ingevoerde tekst wissen"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Spatie invoegen"
+
+msgid "Press ok to install language"
+msgstr "Druk op OK om de taal te installeren"
+
+msgid "Press ok to remove language"
+msgstr "Druk op OK om de taal te verwijderen"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Vorige / Volgende - Wisselen tussen toetsenbord, suggesties en zoekgeschiedenis"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Rood - Backspace / in de zoekgeschiedenis: item verwijderen"
+
+msgid "Remember last search entry"
+msgstr "Laatste zoekopdracht onthouden"
+
+msgid "Remove all"
+msgstr "Alles verwijderen"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "Alle geïnstalleerde talen verwijderen (%d)?"
+
+msgid "Restart GUI"
+msgstr "GUI herstarten"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "enigma2 herstarten om de nieuwe instellingen te laden?"
+
+msgid "Rewind - Clear input text"
+msgstr "Terugspoelen - Ingevoerde tekst wissen"
+
+msgid "Right"
+msgstr "Rechts"
+
+msgid "Save"
+msgstr "Opslaan"
+
+msgid "Search history"
+msgstr "Zoekgeschiedenis"
+
+msgid "Search history entries (1-99999)"
+msgstr "Items in zoekgeschiedenis (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Half transparant"
+
+msgid "Setup virtual keyboard"
+msgstr "Virtueel toetsenbord instellen"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Show flags"
+msgstr "Vlaggen tonen"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Plugin tonen in de pluginbrowser"
+
+msgid "Show search history"
+msgstr "Zoekgeschiedenis tonen"
+
+msgid "Show suggestions"
+msgstr "Suggesties tonen"
+
+msgid "Suggestions"
+msgstr "Suggesties"
+
+msgid "Suggestions provider"
+msgstr "Aanbieder van suggesties"
+
+msgid "Switching the keyboard failed"
+msgstr "Wisselen van toetsenbord mislukt"
+
+msgid "Text - Switch language"
+msgstr "Text - Taal wisselen"
+
+msgid "Text field alignment"
+msgstr "Uitlijning van het tekstveld"
+
+msgid "Text input method-keyboard"
+msgstr "Tekstinvoermethode - toetsenbord"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "De back-up van het toetsenbord van het image ontbreekt, het Nieuw Virtueel Toetsenbord blijft actief."
+
+msgid "Transparent"
+msgstr "Transparant"
+
+msgid "Virtual Keyboard"
+msgstr "Virtueel toetsenbord"
+
+msgid "Yellow - AltGr"
+msgstr "Geel - AltGr"
+
+msgid "is available"
+msgstr "is beschikbaar"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: Warder\n"
 "Language-Team: \n"
@@ -19,123 +19,125 @@ msgid ""
 "\n"
 "Press OK or Exit to abort!"
 msgstr ""
+"\n"
+"Нажмите OK или Exit для отмены!"
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "Загружено языков: %d"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "Загружено языков: %d, с ошибкой: %d"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
-msgstr ""
+msgstr "0-9 - Ввод текста как на телефоне, когда выбрано поле ввода"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "Все языки установлены"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "Все языки удалены"
 
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 msgid "Background color"
-msgstr ""
+msgstr "Цвет фона"
 
 msgid "Black"
-msgstr ""
+msgstr "Чёрный"
 
 msgid "Blue - Shift"
-msgstr ""
+msgstr "Синяя - Shift"
 
 msgid "Cancel"
 msgstr "Отмена"
 
 msgid "Cancel execution?"
-msgstr ""
+msgstr "Прервать выполнение?"
 
 msgid "Caps"
-msgstr ""
+msgstr "Caps"
 
 msgid "Clear"
-msgstr ""
+msgstr "Очист."
 
 msgid "Clear search history"
-msgstr ""
+msgstr "Очистить историю поиска"
 
 msgid "Console"
-msgstr ""
+msgstr "Консоль"
 
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgid "Default"
-msgstr ""
+msgstr "По умолчанию"
 
 msgid "Delete the search history?"
-msgstr ""
+msgstr "Удалить историю поиска?"
 
 msgid "Do you want to install it now?"
-msgstr "Не устанавливать сейчас"
+msgstr "Установить сейчас?"
 
 msgid "Download all"
-msgstr ""
+msgstr "Загрузить все"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "Загрузить все недостающие языки (%d)?"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "Загрузка языка %d из %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Включить/отключить проверку онлайн-обновлений"
 
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #. TRANSLATORS: key caps of the on-screen keyboard - keep them as
 #. short as the English ones, the keys are small
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 msgid "Execution finished!!"
-msgstr ""
+msgstr "Выполнение завершено!!"
 
 msgid "Execution progress:"
-msgstr ""
+msgstr "Ход выполнения:"
 
 msgid "Exit"
-msgstr ""
+msgstr "Выход"
 
 msgid "Exit - Close without taking the text"
-msgstr ""
+msgstr "Exit - Закрыть без применения текста"
 
 msgid "Failed to download language, try later"
 msgstr "Не удалось загрузить язык, попробуйте позже"
 
 msgid "Fast forward - Insert space"
-msgstr ""
+msgstr "Перемотка вперёд - Вставить пробел"
 
 msgid "Font size (-10 to +30)"
-msgstr ""
+msgstr "Размер шрифта (от -10 до +30)"
 
 msgid "Green - Enter: confirm the text and close"
-msgstr ""
+msgstr "Зелёная - Enter: подтвердить текст и закрыть"
 
 msgid "Help"
-msgstr ""
+msgstr "Справка"
 
 msgid "Hide"
-msgstr ""
+msgstr "Скрыть"
 
 msgid "Image virtual keyboard"
-msgstr "Изображение виртуальной клавиатуры"
+msgstr "Встроенная клавиатура имиджа"
 
 msgid "Info - Show this screen again"
-msgstr "Информация - Показать этот экран ещё раз"
+msgstr "Info - Показать этот экран ещё раз"
 
 msgid "Install language"
 msgstr "Установить язык"
@@ -144,29 +146,29 @@ msgid "Installing last update, enigma will be started after install"
 msgstr "Установка последнего обновления, после установки запустится Enigma"
 
 msgid "Keyboard layout selection"
-msgstr ""
+msgstr "Выбор раскладки клавиатуры"
 
 msgid "Language downloaded successfully, exit from install"
-msgstr "Язык успешно загружен, выйдите из программы установки"
+msgstr "Язык успешно загружен, выход из установки"
 
 msgid "Language removed from installed package"
 msgstr "Язык удалён из установленного пакета"
 
 msgid "Left"
-msgstr ""
+msgstr "Влево"
 
 msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
-msgstr ""
+msgstr "Влево / Вправо у края клавиатуры - Перейти к подсказкам или истории поиска"
 
 #, python-format
 msgid "Loading the keyboard layout %s failed"
-msgstr ""
+msgstr "Не удалось загрузить раскладку клавиатуры %s"
 
 msgid "Menu - Settings, install languages, clear the search history"
-msgstr ""
+msgstr "Menu - Настройки, установка языков, очистка истории поиска"
 
 msgid "Mostly transparent"
-msgstr ""
+msgstr "Почти прозрачный"
 
 msgid "New Virtual Keyboard"
 msgstr "Новая виртуальная клавиатура"
@@ -175,75 +177,75 @@ msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors:
 msgstr "Новая виртуальная клавиатура — оригинальный код SamSamSam (e2iplayer). Разработчики: mfaraj57 и Fairbird. Скин и дополнения: KiddaC"
 
 msgid "New Virtual Keyboard Settings"
-msgstr ""
+msgstr "Настройки новой виртуальной клавиатуры"
 
 msgid "New version"
 msgstr "Новая версия"
 
 #, python-format
 msgid "NewVirtualKeyBoard  V %s"
-msgstr ""
+msgstr "NewVirtualKeyBoard  V %s"
 
 msgid "NewVirtualKeyBoard setup"
-msgstr ""
+msgstr "Настройки NewVirtualKeyBoard"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "Ни один язык не установлен"
 
 msgid "Numeric keypad"
-msgstr ""
+msgstr "Цифровая клавиатура"
 
 msgid "Numeric keypad for numbers"
-msgstr ""
+msgstr "Цифровая клавиатура для числовых полей"
 
 msgid "OK - Type the selected key / take the selected suggestion or history entry"
-msgstr ""
+msgstr "OK - Ввести выбранную клавишу / применить выбранную подсказку или запись истории"
 
 msgid "OK / GREEN - accept, EXIT - cancel"
-msgstr ""
+msgstr "OK / ЗЕЛЁНАЯ - принять, EXIT - отмена"
 
 msgid "PVR - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "PVR - Переключение между клавиатурой, подсказками и историей поиска"
 
 msgid "Page Down - Clear input text"
-msgstr "Page Down - Очистить введенный текст"
+msgstr "Page Down - Очистить введённый текст"
 
 msgid "Page Up - Insert space"
 msgstr "Page Up - Вставить пробел"
 
 msgid "Press ok to install language"
-msgstr "Нажмите 'ОК', чтобы установить язык"
+msgstr "Нажмите OK, чтобы установить язык"
 
 msgid "Press ok to remove language"
-msgstr "Нажмите 'ОК', чтобы удалить язык"
+msgstr "Нажмите OK, чтобы удалить язык"
 
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "Назад / Вперёд - Переключение между клавиатурой, подсказками и историей поиска"
 
-msgid "Red - Backspace"
-msgstr ""
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Красная - Backspace / в истории поиска: удалить запись"
 
 msgid "Remember last search entry"
-msgstr ""
+msgstr "Запоминать последний поисковый запрос"
 
 msgid "Remove all"
-msgstr ""
+msgstr "Удалить все"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "Удалить все установленные языки (%d)?"
 
 msgid "Restart GUI"
-msgstr ""
+msgstr "Перезапустить GUI"
 
 msgid "Restart enigma2 to load new settings?"
 msgstr "Перезапустить enigma2 для загрузки новых настроек?"
 
 msgid "Rewind - Clear input text"
-msgstr ""
+msgstr "Перемотка назад - Очистить введённый текст"
 
 msgid "Right"
-msgstr ""
+msgstr "Вправо"
 
 msgid "Save"
 msgstr "Сохранить"
@@ -252,58 +254,58 @@ msgid "Search history"
 msgstr "История поиска"
 
 msgid "Search history entries (1-99999)"
-msgstr ""
+msgstr "Записей в истории поиска (1-99999)"
 
 msgid "Semi-transparent"
-msgstr ""
+msgstr "Полупрозрачный"
 
 msgid "Setup virtual keyboard"
-msgstr ""
+msgstr "Настройка виртуальной клавиатуры"
 
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 msgid "Show flags"
-msgstr ""
+msgstr "Показывать флаги"
 
 msgid "Show plugin in Plugin Browser"
 msgstr "Показывать плагин в браузере плагинов"
 
 msgid "Show search history"
-msgstr ""
+msgstr "Показывать историю поиска"
 
 msgid "Show suggestions"
-msgstr ""
+msgstr "Показывать подсказки"
 
 msgid "Suggestions"
-msgstr ""
+msgstr "Подсказки"
 
 msgid "Suggestions provider"
-msgstr ""
+msgstr "Источник подсказок"
 
 msgid "Switching the keyboard failed"
-msgstr ""
+msgstr "Не удалось переключить клавиатуру"
 
 msgid "Text - Switch language"
-msgstr ""
+msgstr "Text - Сменить язык"
 
 msgid "Text field alignment"
-msgstr ""
+msgstr "Выравнивание текстового поля"
 
 msgid "Text input method-keyboard"
-msgstr "Способ ввода текста: клавиатура"
+msgstr "Клавиатура для ввода текста"
 
 msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
-msgstr ""
+msgstr "Резервная копия встроенной клавиатуры имиджа отсутствует, новая виртуальная клавиатура остаётся активной."
 
 msgid "Transparent"
-msgstr ""
+msgstr "Прозрачный"
 
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Виртуальная клавиатура"
 
 msgid "Yellow - AltGr"
-msgstr ""
+msgstr "Жёлтая - AltGr"
 
 msgid "is available"
-msgstr "Доступна"
+msgstr "доступна"
