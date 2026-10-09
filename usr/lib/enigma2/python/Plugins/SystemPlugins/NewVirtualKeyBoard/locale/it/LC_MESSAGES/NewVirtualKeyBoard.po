@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: unknown\n"
 "Language-Team: \n"
@@ -19,120 +19,122 @@ msgid ""
 "\n"
 "Press OK or Exit to abort!"
 msgstr ""
+"\n"
+"Premi OK o Exit per interrompere!"
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "%d lingue scaricate"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "%d lingue scaricate, %d non riuscite"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
-msgstr ""
+msgstr "0-9 - Inserimento testo come sul telefono, quando il campo di inserimento è selezionato"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "Tutte le lingue sono installate"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "Tutte le lingue rimosse"
 
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 msgid "Background color"
-msgstr ""
+msgstr "Colore di sfondo"
 
 msgid "Black"
-msgstr ""
+msgstr "Nero"
 
 msgid "Blue - Shift"
-msgstr ""
+msgstr "Blu - Maiusc"
 
 msgid "Cancel"
 msgstr "Annulla"
 
 msgid "Cancel execution?"
-msgstr ""
+msgstr "Annullare l'esecuzione?"
 
 msgid "Caps"
-msgstr ""
+msgstr "Caps"
 
 msgid "Clear"
-msgstr ""
+msgstr "Pulisci"
 
 msgid "Clear search history"
-msgstr ""
+msgstr "Cancella cronologia ricerche"
 
 msgid "Console"
-msgstr ""
+msgstr "Console"
 
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgid "Default"
-msgstr ""
+msgstr "Predefinito"
 
 msgid "Delete the search history?"
-msgstr ""
+msgstr "Cancellare la cronologia ricerche?"
 
 msgid "Do you want to install it now?"
-msgstr "Vuoi installarla ora"
+msgstr "Vuoi installarla ora?"
 
 msgid "Download all"
-msgstr ""
+msgstr "Scarica tutte"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "Scaricare tutte le %d lingue mancanti?"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "Download lingua %d di %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "Abilita/Disabilita controllo aggiornamenti online"
 
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #. TRANSLATORS: key caps of the on-screen keyboard - keep them as
 #. short as the English ones, the keys are small
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 msgid "Execution finished!!"
-msgstr ""
+msgstr "Esecuzione terminata!!"
 
 msgid "Execution progress:"
-msgstr ""
+msgstr "Avanzamento esecuzione:"
 
 msgid "Exit"
-msgstr ""
+msgstr "Esci"
 
 msgid "Exit - Close without taking the text"
-msgstr ""
+msgstr "Exit - Chiudi senza applicare il testo"
 
 msgid "Failed to download language, try later"
 msgstr "Download lingua non riuscito, riprova più tardi"
 
 msgid "Fast forward - Insert space"
-msgstr ""
+msgstr "Avanti veloce - Inserisci spazio"
 
 msgid "Font size (-10 to +30)"
-msgstr ""
+msgstr "Dimensione carattere (da -10 a +30)"
 
 msgid "Green - Enter: confirm the text and close"
-msgstr ""
+msgstr "Verde - Enter: conferma il testo e chiudi"
 
 msgid "Help"
-msgstr ""
+msgstr "Aiuto"
 
 msgid "Hide"
-msgstr ""
+msgstr "Nascondi"
 
 msgid "Image virtual keyboard"
-msgstr "Immagine tastiera virtuale"
+msgstr "Tastiera virtuale dell'immagine"
 
 msgid "Info - Show this screen again"
 msgstr "Info - Mostra di nuovo questa schermata"
@@ -144,7 +146,7 @@ msgid "Installing last update, enigma will be started after install"
 msgstr "Installazione ultimo aggiornamento, enigma verrà avviato dopo l’installazione"
 
 msgid "Keyboard layout selection"
-msgstr ""
+msgstr "Selezione layout tastiera"
 
 msgid "Language downloaded successfully, exit from install"
 msgstr "Lingua scaricata con successo, uscire dall’installazione"
@@ -153,20 +155,20 @@ msgid "Language removed from installed package"
 msgstr "Lingua rimossa dal pacchetto installato"
 
 msgid "Left"
-msgstr ""
+msgstr "Sinistra"
 
 msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
-msgstr ""
+msgstr "Sinistra / Destra al bordo della tastiera - Passa ai suggerimenti o alla cronologia ricerche"
 
 #, python-format
 msgid "Loading the keyboard layout %s failed"
-msgstr ""
+msgstr "Caricamento del layout tastiera %s non riuscito"
 
 msgid "Menu - Settings, install languages, clear the search history"
-msgstr ""
+msgstr "Menu - Impostazioni, installa lingue, cancella cronologia ricerche"
 
 msgid "Mostly transparent"
-msgstr ""
+msgstr "Quasi trasparente"
 
 msgid "New Virtual Keyboard"
 msgstr "Nuova Tastiera Virtuale"
@@ -175,35 +177,35 @@ msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors:
 msgstr "Nuova Tastiera Virtuale - Codice originale SamSamSam (e2iplayer). Collaboratori: mfaraj57 e Fairbird. Skin e modifiche: KiddaC"
 
 msgid "New Virtual Keyboard Settings"
-msgstr ""
+msgstr "Impostazioni Nuova Tastiera Virtuale"
 
 msgid "New version"
 msgstr "Nuova versione"
 
 #, python-format
 msgid "NewVirtualKeyBoard  V %s"
-msgstr ""
+msgstr "NewVirtualKeyBoard  V %s"
 
 msgid "NewVirtualKeyBoard setup"
-msgstr ""
+msgstr "Impostazioni NewVirtualKeyBoard"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "Nessuna lingua installata"
 
 msgid "Numeric keypad"
-msgstr ""
+msgstr "Tastierino numerico"
 
 msgid "Numeric keypad for numbers"
-msgstr ""
+msgstr "Tastierino numerico per i campi numerici"
 
 msgid "OK - Type the selected key / take the selected suggestion or history entry"
-msgstr ""
+msgstr "OK - Digita il tasto selezionato / applica il suggerimento o la voce di cronologia selezionata"
 
 msgid "OK / GREEN - accept, EXIT - cancel"
-msgstr ""
+msgstr "OK / VERDE - accetta, EXIT - annulla"
 
 msgid "PVR - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "PVR - Passa tra tastiera, suggerimenti e cronologia ricerche"
 
 msgid "Page Down - Clear input text"
 msgstr "Pagina Giù - Cancella testo inserito"
@@ -218,32 +220,32 @@ msgid "Press ok to remove language"
 msgstr "Premi OK per rimuovere la lingua"
 
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "Precedente / Successivo - Passa tra tastiera, suggerimenti e cronologia ricerche"
 
-msgid "Red - Backspace"
-msgstr ""
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Rosso - Backspace / nella cronologia ricerche: elimina la voce"
 
 msgid "Remember last search entry"
-msgstr ""
+msgstr "Ricorda l'ultima ricerca"
 
 msgid "Remove all"
-msgstr ""
+msgstr "Rimuovi tutte"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "Rimuovere tutte le %d lingue installate?"
 
 msgid "Restart GUI"
-msgstr ""
+msgstr "Riavvia GUI"
 
 msgid "Restart enigma2 to load new settings?"
-msgstr "Riavvia enigma2 per caricare le nuove impostazioni?"
+msgstr "Riavviare enigma2 per caricare le nuove impostazioni?"
 
 msgid "Rewind - Clear input text"
-msgstr ""
+msgstr "Riavvolgi - Cancella testo inserito"
 
 msgid "Right"
-msgstr ""
+msgstr "Destra"
 
 msgid "Save"
 msgstr "Salva"
@@ -252,58 +254,58 @@ msgid "Search history"
 msgstr "Cronologia ricerche"
 
 msgid "Search history entries (1-99999)"
-msgstr ""
+msgstr "Voci cronologia ricerche (1-99999)"
 
 msgid "Semi-transparent"
-msgstr ""
+msgstr "Semitrasparente"
 
 msgid "Setup virtual keyboard"
-msgstr ""
+msgstr "Configura tastiera virtuale"
 
 msgid "Shift"
-msgstr ""
+msgstr "Maiusc"
 
 msgid "Show flags"
-msgstr ""
+msgstr "Mostra bandiere"
 
 msgid "Show plugin in Plugin Browser"
 msgstr "Mostra plugin nel Browser Plugin"
 
 msgid "Show search history"
-msgstr ""
+msgstr "Mostra cronologia ricerche"
 
 msgid "Show suggestions"
-msgstr ""
+msgstr "Mostra suggerimenti"
 
 msgid "Suggestions"
-msgstr ""
+msgstr "Suggerimenti"
 
 msgid "Suggestions provider"
-msgstr ""
+msgstr "Fornitore suggerimenti"
 
 msgid "Switching the keyboard failed"
-msgstr ""
+msgstr "Cambio tastiera non riuscito"
 
 msgid "Text - Switch language"
-msgstr ""
+msgstr "Text - Cambia lingua"
 
 msgid "Text field alignment"
-msgstr ""
+msgstr "Allineamento campo di testo"
 
 msgid "Text input method-keyboard"
 msgstr "Metodo di inserimento testo - tastiera"
 
 msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
-msgstr ""
+msgstr "Manca il backup della tastiera dell'immagine, la Nuova Tastiera Virtuale resta attiva."
 
 msgid "Transparent"
-msgstr ""
+msgstr "Trasparente"
 
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "Tastiera virtuale"
 
 msgid "Yellow - AltGr"
-msgstr ""
+msgstr "Giallo - AltGr"
 
 msgid "is available"
 msgstr "è disponibile"

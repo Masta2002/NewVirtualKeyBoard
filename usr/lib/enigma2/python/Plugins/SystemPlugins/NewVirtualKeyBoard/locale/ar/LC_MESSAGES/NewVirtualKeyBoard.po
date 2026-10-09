@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: NewVirtualKeyBoard\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-02 18:03+0200\n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
 "PO-Revision-Date: 2026-09-30 00:37+0200\n"
 "Last-Translator: RAED\n"
 "Language-Team: \n"
@@ -19,120 +19,122 @@ msgid ""
 "\n"
 "Press OK or Exit to abort!"
 msgstr ""
+"\n"
+"اضغط OK أو Exit للإلغاء!"
 
 #, python-format
 msgid "%d languages downloaded"
-msgstr ""
+msgstr "تم تنزيل %d لغة"
 
 #, python-format
 msgid "%d languages downloaded, %d failed"
-msgstr ""
+msgstr "تم تنزيل %d لغة، وفشل %d"
 
 msgid "0-9 - Text input like on a phone, when the input field is selected"
-msgstr ""
+msgstr "0-9 - إدخال النص كما في الهاتف، عند تحديد حقل الإدخال"
 
 msgid "All languages are installed"
-msgstr ""
+msgstr "جميع اللغات مثبتة"
 
 msgid "All languages removed"
-msgstr ""
+msgstr "تمت إزالة جميع اللغات"
 
 msgid "Alt"
-msgstr ""
+msgstr "Alt"
 
 msgid "Background color"
-msgstr ""
+msgstr "لون الخلفية"
 
 msgid "Black"
-msgstr ""
+msgstr "أسود"
 
 msgid "Blue - Shift"
-msgstr ""
+msgstr "أزرق - Shift"
 
 msgid "Cancel"
 msgstr "إلغاء"
 
 msgid "Cancel execution?"
-msgstr ""
+msgstr "إلغاء التنفيذ؟"
 
 msgid "Caps"
-msgstr ""
+msgstr "Caps"
 
 msgid "Clear"
-msgstr ""
+msgstr "مسح"
 
 msgid "Clear search history"
-msgstr ""
+msgstr "مسح سجل البحث"
 
 msgid "Console"
-msgstr ""
+msgstr "وحدة التحكم"
 
 msgid "Ctrl"
-msgstr ""
+msgstr "Ctrl"
 
 msgid "Default"
-msgstr ""
+msgstr "افتراضي"
 
 msgid "Delete the search history?"
-msgstr ""
+msgstr "حذف سجل البحث؟"
 
 msgid "Do you want to install it now?"
 msgstr "هل تريد التثبيت الآن؟"
 
 msgid "Download all"
-msgstr ""
+msgstr "تنزيل الكل"
 
 #, python-format
 msgid "Download all %d missing languages?"
-msgstr ""
+msgstr "تنزيل جميع اللغات الناقصة (%d)؟"
 
 #, python-format
 msgid "Downloading language %d of %d ..."
-msgstr ""
+msgstr "جاري تنزيل اللغة %d من %d ..."
 
 msgid "Enable/Disable Checking Online Update"
 msgstr "تفعيل/تعطيل التحقق من التحديثات عبر الإنترنت"
 
 msgid "Enter"
-msgstr ""
+msgstr "Enter"
 
 #. TRANSLATORS: key caps of the on-screen keyboard - keep them as
 #. short as the English ones, the keys are small
 msgid "Esc"
-msgstr ""
+msgstr "Esc"
 
 msgid "Execution finished!!"
-msgstr ""
+msgstr "انتهى التنفيذ!!"
 
 msgid "Execution progress:"
-msgstr ""
+msgstr "تقدم التنفيذ:"
 
 msgid "Exit"
-msgstr ""
+msgstr "خروج"
 
 msgid "Exit - Close without taking the text"
-msgstr ""
+msgstr "Exit - إغلاق دون اعتماد النص"
 
 msgid "Failed to download language, try later"
 msgstr "فشل تنزيل اللغة، حاول لاحقًا"
 
 msgid "Fast forward - Insert space"
-msgstr ""
+msgstr "تقديم سريع - إدراج مسافة"
 
 msgid "Font size (-10 to +30)"
-msgstr ""
+msgstr "حجم الخط (-10 إلى +30)"
 
 msgid "Green - Enter: confirm the text and close"
-msgstr ""
+msgstr "أخضر - Enter: تأكيد النص والإغلاق"
 
 msgid "Help"
-msgstr ""
+msgstr "مساعدة"
 
 msgid "Hide"
-msgstr ""
+msgstr "إخفاء"
 
 msgid "Image virtual keyboard"
-msgstr "لوحة مفاتيح افتراضية للصور"
+msgstr "لوحة المفاتيح الافتراضية للنظام"
 
 msgid "Info - Show this screen again"
 msgstr "معلومات - عرض هذه الشاشة مرة أخرى"
@@ -144,29 +146,29 @@ msgid "Installing last update, enigma will be started after install"
 msgstr "جاري تثبيت آخر تحديث، سيبدأ enigma بعد التثبيت"
 
 msgid "Keyboard layout selection"
-msgstr ""
+msgstr "اختيار تخطيط لوحة المفاتيح"
 
 msgid "Language downloaded successfully, exit from install"
-msgstr "تم تنزيل اللغة بنجاح، اخرج من التثبيت"
+msgstr "تم تنزيل اللغة بنجاح، جاري الخروج من التثبيت"
 
 msgid "Language removed from installed package"
 msgstr "تمت إزالة اللغة من الحزمة المثبتة"
 
 msgid "Left"
-msgstr ""
+msgstr "يسار"
 
 msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
-msgstr ""
+msgstr "يسار / يمين عند حافة لوحة المفاتيح - الانتقال إلى الاقتراحات أو سجل البحث"
 
 #, python-format
 msgid "Loading the keyboard layout %s failed"
-msgstr ""
+msgstr "فشل تحميل تخطيط لوحة المفاتيح %s"
 
 msgid "Menu - Settings, install languages, clear the search history"
-msgstr ""
+msgstr "Menu - الإعدادات، تثبيت اللغات، مسح سجل البحث"
 
 msgid "Mostly transparent"
-msgstr ""
+msgstr "شفاف في الغالب"
 
 msgid "New Virtual Keyboard"
 msgstr "لوحة مفاتيح افتراضية جديدة"
@@ -175,35 +177,35 @@ msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors:
 msgstr "لوحة مفاتيح افتراضية جديدة - الكود الأصلي SamSamSam (e2iplayer). المساهمون: mfaraj57 وFairbird. التصميم والتعديلات: KiddaC"
 
 msgid "New Virtual Keyboard Settings"
-msgstr ""
+msgstr "إعدادات لوحة المفاتيح الافتراضية الجديدة"
 
 msgid "New version"
 msgstr "إصدار جديد"
 
 #, python-format
 msgid "NewVirtualKeyBoard  V %s"
-msgstr ""
+msgstr "NewVirtualKeyBoard  V %s"
 
 msgid "NewVirtualKeyBoard setup"
-msgstr ""
+msgstr "إعدادات NewVirtualKeyBoard"
 
 msgid "No language is installed"
-msgstr ""
+msgstr "لا توجد لغة مثبتة"
 
 msgid "Numeric keypad"
-msgstr ""
+msgstr "لوحة الأرقام"
 
 msgid "Numeric keypad for numbers"
-msgstr ""
+msgstr "لوحة الأرقام للحقول الرقمية"
 
 msgid "OK - Type the selected key / take the selected suggestion or history entry"
-msgstr ""
+msgstr "OK - كتابة المفتاح المحدد / اعتماد الاقتراح أو إدخال السجل المحدد"
 
 msgid "OK / GREEN - accept, EXIT - cancel"
-msgstr ""
+msgstr "OK / الأخضر - قبول، EXIT - إلغاء"
 
 msgid "PVR - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "PVR - التبديل بين لوحة المفاتيح والاقتراحات وسجل البحث"
 
 msgid "Page Down - Clear input text"
 msgstr "صفحة لأسفل - مسح نص الإدخال"
@@ -218,32 +220,32 @@ msgid "Press ok to remove language"
 msgstr "اضغط موافق لإزالة اللغة"
 
 msgid "Previous / Next - Switch between keyboard, suggestions and search history"
-msgstr ""
+msgstr "السابق / التالي - التبديل بين لوحة المفاتيح والاقتراحات وسجل البحث"
 
-msgid "Red - Backspace"
-msgstr ""
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "أحمر - حذف للخلف / في سجل البحث: حذف الإدخال"
 
 msgid "Remember last search entry"
-msgstr ""
+msgstr "تذكر آخر عملية بحث"
 
 msgid "Remove all"
-msgstr ""
+msgstr "إزالة الكل"
 
 #, python-format
 msgid "Remove all %d installed languages?"
-msgstr ""
+msgstr "إزالة جميع اللغات المثبتة (%d)؟"
 
 msgid "Restart GUI"
-msgstr ""
+msgstr "إعادة تشغيل الواجهة"
 
 msgid "Restart enigma2 to load new settings?"
 msgstr "إعادة تشغيل enigma2 لتحميل إعدادات جديدة؟"
 
 msgid "Rewind - Clear input text"
-msgstr ""
+msgstr "ترجيع - مسح نص الإدخال"
 
 msgid "Right"
-msgstr ""
+msgstr "يمين"
 
 msgid "Save"
 msgstr "حفظ"
@@ -252,58 +254,58 @@ msgid "Search history"
 msgstr "سجل البحث"
 
 msgid "Search history entries (1-99999)"
-msgstr ""
+msgstr "عدد إدخالات سجل البحث (1-99999)"
 
 msgid "Semi-transparent"
-msgstr ""
+msgstr "شبه شفاف"
 
 msgid "Setup virtual keyboard"
-msgstr ""
+msgstr "إعداد لوحة المفاتيح الافتراضية"
 
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 msgid "Show flags"
-msgstr ""
+msgstr "عرض الأعلام"
 
 msgid "Show plugin in Plugin Browser"
-msgstr "عرض الإضافة في متصفح الإضافة"
+msgstr "عرض الإضافة في متصفح الإضافات"
 
 msgid "Show search history"
-msgstr ""
+msgstr "عرض سجل البحث"
 
 msgid "Show suggestions"
-msgstr ""
+msgstr "عرض الاقتراحات"
 
 msgid "Suggestions"
-msgstr ""
+msgstr "الاقتراحات"
 
 msgid "Suggestions provider"
-msgstr ""
+msgstr "مزود الاقتراحات"
 
 msgid "Switching the keyboard failed"
-msgstr ""
+msgstr "فشل تبديل لوحة المفاتيح"
 
 msgid "Text - Switch language"
-msgstr ""
+msgstr "Text - تغيير اللغة"
 
 msgid "Text field alignment"
-msgstr ""
+msgstr "محاذاة حقل النص"
 
 msgid "Text input method-keyboard"
 msgstr "طريقة إدخال النص - لوحة المفاتيح"
 
 msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
-msgstr ""
+msgstr "النسخة الاحتياطية للوحة مفاتيح النظام مفقودة، ستبقى لوحة المفاتيح الافتراضية الجديدة مفعلة."
 
 msgid "Transparent"
-msgstr ""
+msgstr "شفاف"
 
 msgid "Virtual Keyboard"
-msgstr ""
+msgstr "لوحة المفاتيح الافتراضية"
 
 msgid "Yellow - AltGr"
-msgstr ""
+msgstr "أصفر - AltGr"
 
 msgid "is available"
 msgstr "متوفر"

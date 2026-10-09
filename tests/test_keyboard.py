@@ -252,7 +252,7 @@ class FakeList(object):
         return self.current
 
     def moveToIndex(self, i):
-        pass
+        self.index = i
 
     def moveSelection(self, step):
         pass
@@ -968,6 +968,39 @@ kb['historyList'].current = native(u'Tatort')
 kb.keyOK()
 check('OK on a history entry takes it, back on the text field', kb['text'].Text == u'Tatort' and kb.focus == vk.FOCUS_KEYBOARD and kb.currentKeyId == layouts.KEY_TEXT)
 
+section('RED on the search history')
+kb = newKeyboard()
+kb.history.clear()
+for word in ('Matrix', 'Tatort', 'Alien'):
+    kb.history.add(word)
+kb['text'].Text = u'Tatort'
+kb.input_updated()
+kb.focus = vk.FOCUS_HISTORY
+kb['historyList'].current = 'Alien'
+kb.keyRed()
+check('RED deletes the selected history entry, the others stay', kb.history.entries() == ['Tatort', 'Matrix'], kb.history.entries())
+check('RED: list re-sorted for the text, same row kept', kb['historyList'].items == [('Tatort',), ('Matrix',)] and kb['historyList'].index == 1, (kb['historyList'].items, kb['historyList'].index))
+check('RED: the text is not touched, focus stays on the history', kb['text'].Text == u'Tatort' and kb.focus == vk.FOCUS_HISTORY)
+kb['historyList'].current = 'Unknown'
+kb.keyRed()
+check('RED on an entry that is not in the list does nothing', kb.history.entries() == ['Tatort', 'Matrix'])
+kb['historyList'].current = 'Matrix'
+pressed = []
+kb.processKeyId = lambda keyId: pressed.append(keyId)
+kb.keyBackspace()
+check('held RED (keyBackspace) never deletes history entries', kb.history.entries() == ['Tatort', 'Matrix'] and not pressed)
+kb.keyRed()
+kb['historyList'].current = 'Tatort'
+kb.keyRed()
+check('deleting the last entry removes the file, focus back on the keyboard', kb.history.entries() == [] and not os.path.exists(kb.history.path) and kb.focus == vk.FOCUS_KEYBOARD)
+try:
+    # a path that can't be removed (a folder) - logged, no exception into the key press
+    suggestions.SearchHistory(TMP).clear()
+    clearRaised = False
+except Exception:
+    clearRaised = True
+check('clear() survives a history file it cannot delete', not clearRaised and os.path.isdir(TMP))
+
 section('panels (PVR / PREVIOUS / NEXT)')
 kb.showsuggestion = kb.showHistory = True
 kb.suggestions = ['x']
@@ -1193,7 +1226,7 @@ if not PY3:
 check('every _("...") text is in the .pot (run locale/updateallpo.sh)', used <= potIds, sorted(used - potIds))
 check('no unused .pot texts', potIds <= used, sorted(potIds - used))
 langs = sorted(d for d in os.listdir(LOCALE) if os.path.isdir(os.path.join(LOCALE, d)))
-check('10 translations', len(langs) == 10, langs)
+check('22 translations', len(langs) == 22, langs)
 for lang in langs:
     poPath = os.path.join(LOCALE, lang, 'LC_MESSAGES', 'NewVirtualKeyBoard.po')
     po = readPo(poPath)
@@ -1208,6 +1241,14 @@ os.environ['LANGUAGE'] = 'de'
 check('_() uses the plugin translation', vk._('Search history') in ('Suchverlauf', u'Suchverlauf'), vk._('Search history'))
 os.environ['LANGUAGE'] = 'xx'
 check('_() falls back to English', vk._('Search history') == 'Search history')
+initGlobals = vk._.__globals__
+e2gettext = initGlobals['gettext']
+initGlobals['gettext'] = lambda text: 'E2:' + text
+os.environ['LANGUAGE'] = 'de'
+check('own language: a text kept English in the .po stays English (not enigma2\'s "Eingeben")', vk._('Enter') == 'Enter', vk._('Enter'))
+os.environ['LANGUAGE'] = 'xx'
+check('language without a plugin file: enigma2\'s translation', vk._('Enter') == 'E2:Enter', vk._('Enter'))
+initGlobals['gettext'] = e2gettext
 if oldLanguage is None:
     del os.environ['LANGUAGE']
 else:
@@ -1222,6 +1263,7 @@ check('keymap: OK long only', [k.get('flags') for k in keymap.iter('key') if k.g
 actions = newKeyboard()['actions']
 check('actions: yellow/blue/TEXT/menu', actions['yellow'].__name__ == 'keyYellow' and actions['blue'].__name__ == 'keyBlue' and actions['vk_language'].__name__ == 'switchinstalledvklayout' and actions['menu'].__name__ == 'showSettings')
 check('INFO only through the own keymap (no second "info" action: help would open twice)', actions['vk_help'].__name__ == 'showHelp' and 'info' not in actions)
+check('RED deletes history entries, held RED and USB backspace only text', actions['red'].__name__ == 'keyRed' and actions['red_repeat'].__name__ == 'keyBackspace' and actions['deleteBackward'].__name__ == 'keyBackspace')
 
 section('help')
 kb = newKeyboard()

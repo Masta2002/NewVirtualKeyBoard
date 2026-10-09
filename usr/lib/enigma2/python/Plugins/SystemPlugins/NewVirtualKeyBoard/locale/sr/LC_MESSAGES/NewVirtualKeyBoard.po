@@ -1,0 +1,309 @@
+# NewVirtualKeyBoard - sr
+msgid ""
+msgstr ""
+"Project-Id-Version: NewVirtualKeyBoard\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-02 19:52+0200\n"
+"PO-Revision-Date: 2026-10-09 18:00+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: sr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+msgid ""
+"\n"
+"Press OK or Exit to abort!"
+msgstr ""
+"\n"
+"Pritisnite OK ili Exit za prekid!"
+
+#, python-format
+msgid "%d languages downloaded"
+msgstr "Preuzeto jezika: %d"
+
+#, python-format
+msgid "%d languages downloaded, %d failed"
+msgstr "Preuzeto jezika: %d, neuspešno: %d"
+
+msgid "0-9 - Text input like on a phone, when the input field is selected"
+msgstr "0-9 - Unos teksta kao na telefonu, kada je izabrano polje za unos"
+
+msgid "All languages are installed"
+msgstr "Svi jezici su instalirani"
+
+msgid "All languages removed"
+msgstr "Svi jezici su uklonjeni"
+
+msgid "Alt"
+msgstr "Alt"
+
+msgid "Background color"
+msgstr "Boja pozadine"
+
+msgid "Black"
+msgstr "Crna"
+
+msgid "Blue - Shift"
+msgstr "Plavo - Shift"
+
+msgid "Cancel"
+msgstr "Otkaži"
+
+msgid "Cancel execution?"
+msgstr "Prekinuti izvršavanje?"
+
+msgid "Caps"
+msgstr "Caps"
+
+msgid "Clear"
+msgstr "Briši"
+
+msgid "Clear search history"
+msgstr "Obriši istoriju pretrage"
+
+msgid "Console"
+msgstr "Konzola"
+
+msgid "Ctrl"
+msgstr "Ctrl"
+
+msgid "Default"
+msgstr "Podrazumevano"
+
+msgid "Delete the search history?"
+msgstr "Obrisati istoriju pretrage?"
+
+msgid "Do you want to install it now?"
+msgstr "Da li želite da je instalirate sada?"
+
+msgid "Download all"
+msgstr "Preuzmi sve"
+
+#, python-format
+msgid "Download all %d missing languages?"
+msgstr "Preuzeti sve jezike koji nedostaju (%d)?"
+
+#, python-format
+msgid "Downloading language %d of %d ..."
+msgstr "Preuzimanje jezika %d od %d ..."
+
+msgid "Enable/Disable Checking Online Update"
+msgstr "Uključi/isključi proveru ažuriranja na mreži"
+
+msgid "Enter"
+msgstr "Enter"
+
+#. TRANSLATORS: key caps of the on-screen keyboard - keep them as
+#. short as the English ones, the keys are small
+msgid "Esc"
+msgstr "Esc"
+
+msgid "Execution finished!!"
+msgstr "Izvršavanje završeno!!"
+
+msgid "Execution progress:"
+msgstr "Napredak izvršavanja:"
+
+msgid "Exit"
+msgstr "Izlaz"
+
+msgid "Exit - Close without taking the text"
+msgstr "Exit - Zatvori bez preuzimanja teksta"
+
+msgid "Failed to download language, try later"
+msgstr "Preuzimanje jezika nije uspelo, pokušajte kasnije"
+
+msgid "Fast forward - Insert space"
+msgstr "Premotavanje napred - Umetni razmak"
+
+msgid "Font size (-10 to +30)"
+msgstr "Veličina fonta (-10 do +30)"
+
+msgid "Green - Enter: confirm the text and close"
+msgstr "Zeleno - Enter: potvrdi tekst i zatvori"
+
+msgid "Help"
+msgstr "Pomoć"
+
+msgid "Hide"
+msgstr "Sakrij"
+
+msgid "Image virtual keyboard"
+msgstr "Virtuelna tastatura imidža"
+
+msgid "Info - Show this screen again"
+msgstr "Info - Ponovo prikaži ovaj ekran"
+
+msgid "Install language"
+msgstr "Instaliraj jezik"
+
+msgid "Installing last update, enigma will be started after install"
+msgstr "Instaliranje najnovijeg ažuriranja, enigma će biti pokrenuta nakon instalacije"
+
+msgid "Keyboard layout selection"
+msgstr "Izbor rasporeda tastature"
+
+msgid "Language downloaded successfully, exit from install"
+msgstr "Jezik je uspešno preuzet, izlaz iz instalacije"
+
+msgid "Language removed from installed package"
+msgstr "Jezik je uklonjen iz instaliranog paketa"
+
+msgid "Left"
+msgstr "Levo"
+
+msgid "Left / Right at the edge of the keyboard - Switch to the suggestions or the search history"
+msgstr "Levo / Desno na ivici tastature - Prelazak na predloge ili istoriju pretrage"
+
+#, python-format
+msgid "Loading the keyboard layout %s failed"
+msgstr "Učitavanje rasporeda tastature %s nije uspelo"
+
+msgid "Menu - Settings, install languages, clear the search history"
+msgstr "Menu - Podešavanja, instalacija jezika, brisanje istorije pretrage"
+
+msgid "Mostly transparent"
+msgstr "Uglavnom providno"
+
+msgid "New Virtual Keyboard"
+msgstr "Nova virtuelna tastatura"
+
+msgid "New Virtual Keyboard - Original code SamSamSam (e2iplayer). Contributors: mfaraj57 and Fairbird. Skin and amends: KiddaC"
+msgstr "Nova virtuelna tastatura - Originalni kod SamSamSam (e2iplayer). Saradnici: mfaraj57 i Fairbird. Skin i izmene: KiddaC"
+
+msgid "New Virtual Keyboard Settings"
+msgstr "Nova virtuelna tastatura - podešavanja"
+
+msgid "New version"
+msgstr "Nova verzija"
+
+#, python-format
+msgid "NewVirtualKeyBoard  V %s"
+msgstr "NewVirtualKeyBoard  V %s"
+
+msgid "NewVirtualKeyBoard setup"
+msgstr "NewVirtualKeyBoard podešavanja"
+
+msgid "No language is installed"
+msgstr "Nijedan jezik nije instaliran"
+
+msgid "Numeric keypad"
+msgstr "Numerička tastatura"
+
+msgid "Numeric keypad for numbers"
+msgstr "Numerička tastatura za brojeve"
+
+msgid "OK - Type the selected key / take the selected suggestion or history entry"
+msgstr "OK - Unesi izabrani taster / preuzmi izabrani predlog ili unos iz istorije"
+
+msgid "OK / GREEN - accept, EXIT - cancel"
+msgstr "OK / ZELENO - prihvati, EXIT - otkaži"
+
+msgid "PVR - Switch between keyboard, suggestions and search history"
+msgstr "PVR - Prebacivanje između tastature, predloga i istorije pretrage"
+
+msgid "Page Down - Clear input text"
+msgstr "Page Down - Obriši uneti tekst"
+
+msgid "Page Up - Insert space"
+msgstr "Page Up - Umetni razmak"
+
+msgid "Press ok to install language"
+msgstr "Pritisnite OK da instalirate jezik"
+
+msgid "Press ok to remove language"
+msgstr "Pritisnite OK da uklonite jezik"
+
+msgid "Previous / Next - Switch between keyboard, suggestions and search history"
+msgstr "Prethodno / Sledeće - Prebacivanje između tastature, predloga i istorije pretrage"
+
+msgid "Red - Backspace / in the search history: delete the entry"
+msgstr "Crveno - Brisanje unazad / u istoriji pretrage: obriši unos"
+
+msgid "Remember last search entry"
+msgstr "Zapamti poslednju pretragu"
+
+msgid "Remove all"
+msgstr "Ukloni sve"
+
+#, python-format
+msgid "Remove all %d installed languages?"
+msgstr "Ukloniti sve instalirane jezike (%d)?"
+
+msgid "Restart GUI"
+msgstr "Ponovo pokreni GUI"
+
+msgid "Restart enigma2 to load new settings?"
+msgstr "Ponovo pokrenuti enigma2 radi učitavanja novih podešavanja?"
+
+msgid "Rewind - Clear input text"
+msgstr "Premotavanje nazad - Obriši uneti tekst"
+
+msgid "Right"
+msgstr "Desno"
+
+msgid "Save"
+msgstr "Sačuvaj"
+
+msgid "Search history"
+msgstr "Istorija pretrage"
+
+msgid "Search history entries (1-99999)"
+msgstr "Broj unosa u istoriji pretrage (1-99999)"
+
+msgid "Semi-transparent"
+msgstr "Poluprovidno"
+
+msgid "Setup virtual keyboard"
+msgstr "Podešavanje virtuelne tastature"
+
+msgid "Shift"
+msgstr "Shift"
+
+msgid "Show flags"
+msgstr "Prikaži zastave"
+
+msgid "Show plugin in Plugin Browser"
+msgstr "Prikaži dodatak u pregledaču dodataka"
+
+msgid "Show search history"
+msgstr "Prikaži istoriju pretrage"
+
+msgid "Show suggestions"
+msgstr "Prikaži predloge"
+
+msgid "Suggestions"
+msgstr "Predlozi"
+
+msgid "Suggestions provider"
+msgstr "Izvor predloga"
+
+msgid "Switching the keyboard failed"
+msgstr "Prebacivanje tastature nije uspelo"
+
+msgid "Text - Switch language"
+msgstr "Text - Promeni jezik"
+
+msgid "Text field alignment"
+msgstr "Poravnanje polja za tekst"
+
+msgid "Text input method-keyboard"
+msgstr "Način unosa teksta - tastatura"
+
+msgid "The backup of the image keyboard is missing, the New Virtual Keyboard stays active."
+msgstr "Rezervna kopija tastature imidža nedostaje, Nova virtuelna tastatura ostaje aktivna."
+
+msgid "Transparent"
+msgstr "Providno"
+
+msgid "Virtual Keyboard"
+msgstr "Virtuelna tastatura"
+
+msgid "Yellow - AltGr"
+msgstr "Žuto - AltGr"
+
+msgid "is available"
+msgstr "je dostupna"
