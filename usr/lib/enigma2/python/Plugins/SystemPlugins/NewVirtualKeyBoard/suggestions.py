@@ -39,8 +39,9 @@ def getSuggestionsUrl(provider, text, locale):
             first = 'x'
         return 'https://v3.sg.media-imdb.com/suggestion/%s/%s.json' % (first, quote(text.lower()))
     # ie/oe=utf-8: else Google answers some languages (ar, ru, el, tr, fa, ...)
-    # in a legacy Windows code page
-    return 'https://suggestqueries.google.com/complete/search?output=firefox&ie=utf-8&oe=utf-8&hl=%s&gl=%s%s&q=%s' % (lang, country.lower(), '&ds=yt' if provider == 'youtube' else '', query)
+    # in a legacy Windows code page; client=firefox: output=firefox answers
+    # HTTP 400 since 2026-10, same JSON reply
+    return 'https://suggestqueries.google.com/complete/search?client=firefox&ie=utf-8&oe=utf-8&hl=%s&gl=%s%s&q=%s' % (lang, country.lower(), '&ds=yt' if provider == 'youtube' else '', query)
 
 
 def parseSuggestions(provider, raw, contentType=''):

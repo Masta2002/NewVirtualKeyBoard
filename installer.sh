@@ -1,9 +1,12 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="14.01"
+version="14.02"
 description="
 What is NEW :
+- Google and YouTube search suggestions work again (Google answered
+  every request with an error since October 2026)
+Since 14.01 :
 - Polish translation
 - Arabic, Czech, French, Hungarian, Italian, Russian, Slovak and Chinese
   translations complete, wrong old texts corrected
