@@ -152,10 +152,28 @@ class Language(object):
         pass
 
 
+class RCInput(object):
+    # enigma2's eRCInput singleton: the keyboard mode only
+    kmNone, kmAscii = 0, 1
+
+    def __init__(self):
+        self.mode = self.kmNone
+
+    def getKeyboardMode(self):
+        return self.mode
+
+    def setKeyboardMode(self, mode):
+        self.mode = mode
+
+
+RCINPUT = RCInput()
+ASCII_CODE = [65]  # what getPrevAsciiCode() returns next
+
 LANGUAGE = Language()
 mod('enigma', loadPNG=lambda p: ('png', p), ePoint=Anything, gRGB=lambda *a: a, eListboxPythonMultiContent=MultiContent,
     eListbox=Anything, gFont=lambda *a: a, RT_HALIGN_LEFT=0, RT_VALIGN_CENTER=0, RT_WRAP=0,
-    getDesktop=lambda n: Desktop(), getPrevAsciiCode=lambda: 65, eTimer=Anything, eConsoleAppContainer=Anything)
+    getDesktop=lambda n: Desktop(), getPrevAsciiCode=lambda: ASCII_CODE[0], eTimer=Anything, eConsoleAppContainer=Anything,
+    eRCInput=type('eRCInput', (object,), {'getInstance': staticmethod(lambda: RCINPUT)}))
 mod('Components.ScrollLabel', ScrollLabel=Anything)
 mod('Components.Sources.StaticText', StaticText=Anything)
 
@@ -194,6 +212,16 @@ class Screen(dict):
         self.onLayoutFinish = []
         self.onShown = []
         self.onClose = []
+        self.onExecBegin = []
+        self.onExecEnd = []
+
+    def execBegin(self):
+        for fn in self.onExecBegin:
+            fn()
+
+    def execEnd(self):
+        for fn in self.onExecEnd:
+            fn()
 
     def setTitle(self, t):
         self.title = t
@@ -288,6 +316,10 @@ class FakeInput(object):
 
     def insertChar(self, ch, pos, owr, ins):
         self.Text = self.Text[:pos] + ch + self.Text[pos:]
+
+    def handleAscii(self, code):
+        self.insertChar(chr(code) if PY3 else unichr(code), self.currPos, False, True)  # noqa: F821
+        self.currPos += 1
 
     def innerright(self):
         if self.currPos < len(self.Text):
@@ -968,6 +1000,41 @@ kb['historyList'].current = native(u'Tatort')
 kb.keyOK()
 check('OK on a history entry takes it, back on the text field', kb['text'].Text == u'Tatort' and kb.focus == vk.FOCUS_KEYBOARD and kb.currentKeyId == layouts.KEY_TEXT)
 
+section('USB keyboard')
+kb = newKeyboard()
+RCINPUT.mode = RCINPUT.kmNone
+kb.execBegin()
+check('in front: ASCII keyboard mode on', RCINPUT.mode == RCINPUT.kmAscii)
+kb.execEnd()
+check('sub dialog / close: previous mode back', RCINPUT.mode == RCINPUT.kmNone and kb.prevKeyboardMode is None)
+RCINPUT.mode = 7
+kb.execEnd()
+check('a second execEnd changes nothing', RCINPUT.mode == 7)
+RCINPUT.mode = RCINPUT.kmNone
+kb.execBegin()
+markers = []
+kb.move_KMarker = lambda *a: markers.append(a)
+updates = []
+kb.updateSuggestions = updates.append
+kb['text'].Text, kb['text'].currPos = u'Ma', 2
+kb.currentKeyId, kb.rowIdx, kb.colIdx = layouts.KEY_GRID[2][3], 2, 3
+ASCII_CODE[0] = ord('x')
+kb.keyGotAscii()
+check('typed on a key: lands in the text, selection on the text field', kb['text'].Text == u'Max' and kb.currentKeyId == layouts.KEY_TEXT and kb.focus == vk.FOCUS_KEYBOARD and markers[-1] == (layouts.KEY_GRID[2][3], layouts.KEY_TEXT), repr((kb['text'].Text, markers)))
+check('typed: suggestions/history updated', updates[-1] == 'Max', updates)
+kb.focus = vk.FOCUS_SUGGESTIONS
+kb['suggestionList'].setSelectionState(True)
+ASCII_CODE[0] = 0xe4
+kb.keyGotAscii()
+check('typed on the suggestions: back to the text field', kb['text'].Text == u'Max\xe4' and kb.focus == vk.FOCUS_KEYBOARD and kb.currentKeyId == layouts.KEY_TEXT and not kb['suggestionList'].sel, repr(kb['text'].Text))
+del markers[:]
+ASCII_CODE[0] = ord(' ')
+kb.keyGotAscii()
+check('typed on the text field: selection not moved', kb['text'].Text == u'Max\xe4 ' and not markers, markers)
+kb.execEnd()
+check('closed: previous mode back', RCINPUT.mode == RCINPUT.kmNone)
+ASCII_CODE[0] = 65
+
 section('RED on the search history')
 kb = newKeyboard()
 kb.history.clear()
@@ -1432,6 +1499,11 @@ pin['text'] = types.SimpleNamespace(setText=labels.append, instance=None) if PY3
 for d in (1, 2, 3, 4, 5):
     pin.addDigit(d)
 check('PIN masked and limited to maxSize', pin.text == '1234' and labels[-1] == '****', (pin.text, labels[-1:]))
+RCINPUT.mode = RCINPUT.kmNone
+pad.execBegin()
+modeInFront = RCINPUT.mode
+pad.execEnd()
+check('keypad: ASCII keyboard mode while in front, previous mode after', modeInFront == RCINPUT.kmAscii and RCINPUT.mode == RCINPUT.kmNone)
 
 # ==== suggestions: URLs and parsing (offline) =========================================================
 section('suggestions')

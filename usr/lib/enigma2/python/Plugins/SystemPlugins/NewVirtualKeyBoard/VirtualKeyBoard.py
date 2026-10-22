@@ -36,7 +36,7 @@ from Plugins.SystemPlugins.NewVirtualKeyBoard.layouts import (KbLayouts, default
     flagFileForLayout)
 from Plugins.SystemPlugins.NewVirtualKeyBoard.skin import KEY_IDS, MARKERS, KEY_ICONS, keyArt, keyMarker, keyboardSkin
 from Plugins.SystemPlugins.NewVirtualKeyBoard.suggestions import HISTORY_FILE, SearchHistory, SuggestionsFetcher
-from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import (PY3, BACKGROUND_COLORS, PixmapWidget, byTier, desktopFactor,
+from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import (PY3, BACKGROUND_COLORS, AsciiKeyboardMode, PixmapWidget, byTier, desktopFactor,
     eConnectCallback, fontOffset, getversioninfo, iconPath, isFHD, keyArtDir, menuIconsDir, offsetFont, pluginPath, scaleSkin, sc, setting,
     trace_error)
 
@@ -411,7 +411,7 @@ class TextInput(Input):
             self.nvkTimeoutCallback()
 
 
-class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
+class NewVirtualKeyBoard(Screen, SuggestionsFetcher, AsciiKeyboardMode):
 
     # openATV's VirtualKeyboard constants - its screens pass style= and
     # PackageFeedEditor (Screens/Opkg.py) subclasses the keyboard, uses
@@ -495,6 +495,7 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
         self.onLayoutFinish.append(self.loadKBpixmaps)
         self.onShown.append(self.onWindowShow)
         self.onClose.append(self.__onClose)
+        self.initAsciiKeyboardMode()
 
     def buildSkin(self):
         if isFHD():
@@ -1008,9 +1009,19 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
         text = self.panelList(self.focus).getCurrent()
         if text:
             self.setText(text)
+        self.focusTextField()
+
+    def focusTextField(self):
+        # the selection to the text field, from a key or one of the lists
+        if self.focus == FOCUS_KEYBOARD and self.currentKeyId == KEY_TEXT:
+            return
+        oldKeyId = self.currentKeyId if self.focus == FOCUS_KEYBOARD else -1
         self.currentKeyId = KEY_TEXT
         self.rowIdx, self.colIdx = 0, KEY_COLUMNS // 2
-        self.switchToKeyboard()
+        if oldKeyId == -1:
+            self.switchToKeyboard()
+        else:
+            self.move_KMarker(oldKeyId, KEY_TEXT)
 
     def keyBack(self):
         if self.focus == FOCUS_KEYBOARD:
@@ -1061,12 +1072,15 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher):
                 trace_error()
 
     def keyGotAscii(self):
-        # USB keyboard, on the text field
-        if self.currentKeyId == KEY_TEXT:
-            try:
-                self['text'].handleAscii(getPrevAsciiCode())
-            except Exception:
-                trace_error()
+        # USB keyboard: typed characters always go to the text field, the
+        # selection moves there so Enter, arrows and Backspace act on the text
+        try:
+            code = getPrevAsciiCode()
+            self.focusTextField()
+            self['text'].handleAscii(code)
+        except Exception:
+            trace_error()
+        self.input_updated()
 
     # ---- history and suggestions ------------------------------------------------------
 
