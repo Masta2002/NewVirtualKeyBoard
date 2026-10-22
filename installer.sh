@@ -1,9 +1,14 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="14.02"
+version="14.03"
 description="
 What is NEW :
+- USB keyboards type again (letters were rejected with the
+  'unhandled key' sign on openATV); typed text always goes into the
+  text field, also from a key or the lists, and updates the suggestions
+- the numeric keypad takes digits from a USB keyboard too
+Since 14.02 :
 - Google and YouTube search suggestions work again (Google answered
   every request with an error since October 2026)
 Since 14.01 :

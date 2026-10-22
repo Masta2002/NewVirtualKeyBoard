@@ -14,7 +14,7 @@ from Components.Label import Label
 from Tools.LoadPixmap import LoadPixmap
 
 from Plugins.SystemPlugins.NewVirtualKeyBoard import _
-from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import BACKGROUND_COLORS, PixmapWidget, desktopFactor, iconPath, keyArtDir, scaleSkin, setting, trace_error
+from Plugins.SystemPlugins.NewVirtualKeyBoard.tools import BACKGROUND_COLORS, AsciiKeyboardMode, PixmapWidget, desktopFactor, iconPath, keyArtDir, scaleSkin, setting, trace_error
 
 
 def numPadMode(session, inputType):
@@ -57,7 +57,7 @@ def numPadMode(session, inputType):
     return None
 
 
-class NVKNumPad(Screen):
+class NVKNumPad(Screen, AsciiKeyboardMode):
     # FHD reference geometry, scaled to the desktop (HD 2/3, WQHD 4/3)
     KEY_W = 136
     KEY_H = 68
@@ -76,6 +76,7 @@ class NVKNumPad(Screen):
         self.maxDigits = maxSize if isinstance(maxSize, int) and not isinstance(maxSize, bool) and maxSize > 0 else self.MAX_DIGITS
         self.skin = self.prepareSkin()
         Screen.__init__(self, session)
+        self.initAsciiKeyboardMode()
         self.skinName = 'NVKNumPad'
         self.setTitle(title or _('New Virtual Keyboard'))
 

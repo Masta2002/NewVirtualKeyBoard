@@ -243,6 +243,38 @@ class PixmapWidget(Pixmap):
         self.instance.setPixmap(ptr)
 
 
+class AsciiKeyboardMode(object):
+    # USB keyboard: enigma2 only hands out typed characters (gotAsciiCode) in
+    # ASCII mode, else letters come as raw key codes nothing maps (the
+    # "unhandled key" sign on openATV). On while the screen is in front; the
+    # previous mode comes back as soon as another screen takes over (sub
+    # dialogs, close) - left on, it breaks the number keys of the next screens.
+    # Call initAsciiKeyboardMode() after Screen.__init__.
+
+    def initAsciiKeyboardMode(self):
+        self.prevKeyboardMode = None
+        self.onExecBegin.append(self.setAsciiKeyboardMode)
+        self.onExecEnd.append(self.restoreKeyboardMode)
+
+    def setAsciiKeyboardMode(self):
+        try:
+            from enigma import eRCInput
+            rcinput = eRCInput.getInstance()
+            self.prevKeyboardMode = rcinput.getKeyboardMode()
+            rcinput.setKeyboardMode(rcinput.kmAscii)
+        except Exception:
+            trace_error()
+
+    def restoreKeyboardMode(self):
+        if self.prevKeyboardMode is not None:
+            try:
+                from enigma import eRCInput
+                eRCInput.getInstance().setKeyboardMode(self.prevKeyboardMode)
+            except Exception:
+                trace_error()
+            self.prevKeyboardMode = None
+
+
 class eConnectCallbackObj:
     # keeps an enigma2 signal connection alive (connect() on newer images,
     # the list of callbacks on older ones and DreamOS)
