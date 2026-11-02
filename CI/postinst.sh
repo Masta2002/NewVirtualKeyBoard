@@ -19,6 +19,8 @@ if grep -q '^config.NewVirtualKeyBoard.textinput=NewVirtualKeyBoard$' /etc/enigm
 	rm -f $S/VirtualKeyBoard.pyo $S/VirtualKeyBoard.pyc
 	ln -s $P/VirtualKeyBoard.py $S/VirtualKeyBoard.py
 	echo "NewVirtualKeyBoard installed - the new keyboard is selected (as in the saved settings), restart enigma2"
+elif [ -L $S/VirtualKeyBoard.py ]; then
+	echo "NewVirtualKeyBoard installed - the new keyboard is active, restart enigma2"
 else
 	echo "NewVirtualKeyBoard installed - restart enigma2 and select the new keyboard in Menu > System > NewVirtualKeyBoard setup"
 fi

@@ -31,7 +31,7 @@ from Tools.LoadPixmap import LoadPixmap
 from Plugins.SystemPlugins.NewVirtualKeyBoard import _
 from Plugins.SystemPlugins.NewVirtualKeyBoard.layouts import (KbLayouts, defaultKBLAYOUT, KEY_TEXT, KEY_ESC, KEY_BACKSPACE, KEY_CLEAR,
     KEY_DELETE, KEY_CAPS, KEY_ENTER, KEY_SHIFT_L, KEY_SHIFT_R, KEY_LANGUAGE, KEY_CTRL, KEY_ALT, KEY_SPACE, KEY_ALTGR, KEY_LEFT,
-    KEY_RIGHT, KEY_GRID, KEY_ROWS, KEY_COLUMNS, LEFT_KEYS, RIGHT_KEYS, CHARACTER_KEYS, SK_NONE, SK_SHIFT, SK_CTRL, SK_ALT,
+    KEY_RIGHT, KEY_ISO, KEY_GRID, KEY_ROWS, KEY_COLUMNS, LEFT_KEYS, RIGHT_KEYS, CHARACTER_KEYS, SK_NONE, SK_SHIFT, SK_CTRL, SK_ALT,
     SK_CAPSLOCK, layoutFile, installedLayoutIds, readLayoutFile, downloadLayout, layoutItem, systemLayoutId, flagFileForLocale,
     flagFileForLayout)
 from Plugins.SystemPlugins.NewVirtualKeyBoard.skin import KEY_IDS, MARKERS, KEY_ICONS, keyArt, keyMarker, keyboardSkin
@@ -449,6 +449,15 @@ class NewVirtualKeyBoard(Screen, SuggestionsFetcher, AsciiKeyboardMode):
         Screen.__init__(self, session)
         SuggestionsFetcher.__init__(self, self.setSuggestions)
         self.skinName = 'NewVirtualKeyBoard'
+        # a keyboard screen in the image skin must have the key grid since
+        # 13.9 (key 63 is new): on an older copy Caps is too wide for its
+        # selection frame, YELLOW is marked on the language key and key 63
+        # is missing - the screen of this plugin is used instead
+        if hasattr(self, 'mandatoryWidgets'):
+            self.mandatoryWidgets = [str(KEY_ISO)]
+        else:
+            # image without that check: no skin screen at all
+            self.skinName = 'NewVirtualKeyBoardPlugin'
         self.settings = config.NewVirtualKeyBoard
         text = text or ''
         if not text.strip() and setting('rememberlast', True):

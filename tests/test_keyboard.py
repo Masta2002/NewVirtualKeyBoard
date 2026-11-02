@@ -645,6 +645,11 @@ check('every skin widget is created by the screen', set(widgets) <= screenWidget
 missingPix = [p.get('pixmap') for p in root.findall('ePixmap') if not os.path.exists(p.get('pixmap'))]
 check('every ePixmap file exists', not missingPix, missingPix)
 check('no vkey_country any more', 'vkey_country' not in kb.skin)
+check('image without mandatoryWidgets: no skin screen, only the own one', kb.skinName == 'NewVirtualKeyBoardPlugin' and not hasattr(kb, 'mandatoryWidgets'))
+Screen.mandatoryWidgets = None
+checkedKb = newKeyboard()
+del Screen.mandatoryWidgets
+check('a skin screen needs key 63, else the own one is used', checkedKb.skinName == 'NewVirtualKeyBoard' and checkedKb.mandatoryWidgets == ['63'] and '63' in widgets)
 
 
 def rect(name):
@@ -1178,25 +1183,26 @@ installer = readBytes(os.path.join(REPO, 'installer.sh'))
 check('installer.sh has LF line endings', b'\r' not in installer)
 version, description = setupmod.parseInstaller(installer)
 check('installer.sh version == plugin version', version == setupmod.VER, (version, setupmod.VER))
-check('description read', description.startswith('What is NEW') and 'numeric keypad' in description)
+check('description read', description.startswith('What is NEW') and 'Older changes' in description)
 check('"version=" inside the description is text', setupmod.parseInstaller(b'description="\nversion=99\n"\nversion="1.0"\n') == ('1.0', 'version=99'))
 st = setupmod.nvKeyboardSetup(Session(), False, None)
 st.parseData(installer)
 check('same version -> no update prompt', not st.session.opened)
 st.parseData(installer.replace(('version="%s"' % setupmod.VER).encode(), b'version="99.0"'))
-check('newer version -> update prompt with the changelog', st.session.opened and '99.0' in st.session.last()[0][1] and 'numeric keypad' in st.session.last()[0][1])
+check('newer version -> update prompt with the changelog', st.session.opened and '99.0' in st.session.last()[0][1] and 'Older changes' in st.session.last()[0][1])
 st.parseData(b'no version here')
 check('installer.sh without version -> no crash, no prompt', len(st.session.opened) == 1)
 st.close()
 st.parseData(installer.replace(('version="%s"' % setupmod.VER).encode(), b'version="99.0"'))
 check('no prompt after the settings closed', len(st.session.opened) == 1)
 cfg.updateonline.value = True
-setupmod.urlread = lambda url, timeout: (installer.replace(('version="%s"' % setupmod.VER).encode(), b'version="13.10"'), 'text/plain')
+offered = installer.replace(('version="%s"' % setupmod.VER).encode(), b'version="13.10"')
+setupmod.urlread = lambda url, timeout: (offered, 'text/plain')
 pluginVer, setupmod.VER = setupmod.VER, '13.9'
 st = setupmod.nvKeyboardSetup(Session(), False, None)
 st.onStart()
 runQueue()
-check('online check: 13.10 is offered on 13.9 (float said no)', st.session.opened and '13.10' in st.session.last()[0][1])
+check('online check: 13.10 is offered on 13.9 (float said no)', st.session.opened and 'New version 13.10' in st.session.last()[0][1])
 setupmod.VER = pluginVer
 cfg.updateonline.value = False
 
@@ -1251,6 +1257,7 @@ if canLink:
           runPostinst() and not os.path.exists(os.path.join(fakeScreens, 'VirtualKeyBoard.pyc'))
           and readBytes(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc')) == b'image')
     check('postinst again: backup kept', runPostinst() and readBytes(os.path.join(fakeScreens, 'VirtualKeyBoard_backup.pyc')) == b'image')
+    check('postinst with the keyboard already active says so', b'is active' in subprocess.check_output(['sh', script]))
 else:
     print('     (postinst run skipped: no symlinks or sh here)')
 shutil.rmtree(fakeRoot, ignore_errors=True)
