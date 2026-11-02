@@ -1,67 +1,29 @@
 #!/bin/sh
 ##setup command=wget https://raw.githubusercontent.com/Masta2002/NewVirtualKeyBoard/main/installer.sh -O - | /bin/sh
 ###########
-version="14.03"
+version="14.04"
 description="
 What is NEW :
-- USB keyboards type again (letters were rejected with the
-  'unhandled key' sign on openATV); typed text always goes into the
-  text field, also from a key or the lists, and updates the suggestions
-- the numeric keypad takes digits from a USB keyboard too
-Since 14.02 :
-- Google and YouTube search suggestions work again (Google answered
-  every request with an error since October 2026)
-Since 14.01 :
-- Polish translation
-- Arabic, Czech, French, Hungarian, Italian, Russian, Slovak and Chinese
-  translations complete, wrong old texts corrected
-- RED on the search history deletes the selected entry
-- new translations: Bulgarian, Danish, Dutch, Norwegian, Portuguese,
-  Romanian, Serbian, Spanish, Swedish, Turkish, Ukrainian
-Since 13.14 :
-- the PVR key also works on remotes that send KEY_VIDEO for it
-Since 13.13 :
-- language list (Install language): RED removes all installed languages,
-  GREEN downloads all missing ones
-Since 13.12 :
-- downloads check the server certificate; boxes without CA certificates
-  fall back to the unchecked download as before
-- no deprecation warning on Python 3.14 when a layout is loaded
-Since 13.11 :
-- updates and keyboard layouts now come from
-  github.com/Masta2002/NewVirtualKeyBoard
-Since 13.10 :
-- OK on the language key switches between the installed languages,
-  OK long opens a list of only those
-- the new keyboard is selected again after a reinstall when the saved
-  settings select it
-- updates no longer bring removed languages back
-- Greek translation complete, long button labels wrap in the settings
-Since 13.9 :
-- all 218 Windows keyboard layouts, drawn like the real keyboard (ISO 48 keys)
-- numeric keypad for number fields, key help for all keys
-- YELLOW = AltGr, BLUE = Shift, TEXT = language, PVR = switch lists
-- MENU opens the settings directly, search history size (1-99999)
-- more settings (font size, alignment, flags, background, suggestions)
-- search suggestions: Google, YouTube, Bing, DuckDuckGo, IMDb
-- translations follow the enigma2 language (gettext)
-- WQHD support, fixes for openATV and Python 2 images
+- an old copy of the keyboard screen in the image skin (before 13.9) is
+  ignored: it made Caps too wide for its frame and marked the wrong key
+- correct messages after the install, also for ipk and deb
+Older changes: github.com/Masta2002/NewVirtualKeyBoard/releases
 "
 
 PLUGINPATH=/usr/lib/enigma2/python/Plugins/SystemPlugins/NewVirtualKeyBoard
-TMPDIR=/tmp/NewVirtualKeyBoard_update
+WORKDIR=/tmp/NewVirtualKeyBoard_update
 
 # Download and check first - the box is only touched when the download is ok
 echo " ** Download and install NewVirtualKeyBoard ** "
-rm -rf "$TMPDIR"
-mkdir -p "$TMPDIR"
-cd "$TMPDIR" || exit 1
+rm -rf "$WORKDIR"
+mkdir -p "$WORKDIR"
+cd "$WORKDIR" || exit 1
 if ! wget -q "https://github.com/Masta2002/NewVirtualKeyBoard/archive/refs/heads/main.tar.gz" -O main.tar.gz \
    || ! tar -xzf main.tar.gz \
    || [ ! -f "NewVirtualKeyBoard-main$PLUGINPATH/VirtualKeyBoard.py" ]; then
 	echo "Download failed .. nothing was changed"
 	cd /tmp
-	rm -rf "$TMPDIR"
+	rm -rf "$WORKDIR"
 	exit 1
 fi
 
@@ -86,13 +48,13 @@ find "NewVirtualKeyBoard-main$PLUGINPATH/locale" \( -name '*.po' -o -name '*.pot
 if ! cp -r "NewVirtualKeyBoard-main/usr" /; then
 	echo "Copying the files failed .. the plugin may be incomplete, run the installer again"
 	cd /tmp
-	rm -rf "$TMPDIR"
+	rm -rf "$WORKDIR"
 	exit 1
 fi
 # same as the ipk: the new keyboard again when the saved settings select it
-sh "NewVirtualKeyBoard-main/CI/postinst.sh"
+sh "NewVirtualKeyBoard-main/CI/postinst.sh" >/dev/null
 cd /tmp
-rm -rf "$TMPDIR"
+rm -rf "$WORKDIR"
 
 ### Check if plugin installed correctly
 if [ ! -f "$PLUGINPATH/VirtualKeyBoard.py" ]; then
@@ -100,15 +62,26 @@ if [ ! -f "$PLUGINPATH/VirtualKeyBoard.py" ]; then
 	exit 1
 fi
 
+bannerLine() {
+	printf '# %-71s #\n' "$1"
+}
+
 sync
 echo
 echo
 echo "###########################################################################"
-echo "#                 NewVirtualKeyBoard INSTALLED SUCCESSFULLY               #"
-echo "#                       mfaraj57 & RAED (fairbird)                        #"
-echo "#                               support                                   #"
-echo "#                         https://www.tunisia-sat.com                     #"
-echo "#  restart enigma2 and select New virtual keyboard setup from menu-system #"
+bannerLine "NewVirtualKeyBoard $version installed successfully"
+bannerLine ""
+if [ -L /usr/lib/enigma2/python/Screens/VirtualKeyBoard.py ]; then
+	bannerLine "The new keyboard is active."
+else
+	bannerLine "To use it: Menu > System > NewVirtualKeyBoard setup"
+fi
+bannerLine ""
+bannerLine "By SamSamSam (E2iPlayer), mfaraj57, RAED (fairbird) and contributors"
+bannerLine "Updates and help: https://github.com/Masta2002/NewVirtualKeyBoard"
+bannerLine ""
+bannerLine "enigma2 restarts now."
 echo "###########################################################################"
 echo
 killall enigma2
